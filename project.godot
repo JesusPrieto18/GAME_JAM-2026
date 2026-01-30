@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="GameJAM-2026"
-run/main_scene="res://player.tscn"
+run/main_scene="res://Scenes/player.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/minimize_disabled=true
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
 
 [input]
 
@@ -62,4 +70,5 @@ Jump={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
