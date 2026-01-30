@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://b7pno4jujasmt"]
 
 [ext_resource type="Texture2D" uid="uid://vhksrle48fbc" path="res://icon.svg" id="1_iukft"]
+[ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="2_gl6un"]
 
-[node name="Node2D" unique_id=991731112]
+[node name="Node2D" type="Node2D" unique_id=806564061]
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=394025991]
-position = Vector2(241, 120)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2061823836]
+position = Vector2(256, 114)
 texture = ExtResource("1_iukft")
+
+[node name="TextureRect" type="TextureRect" parent="Sprite2D" unique_id=491959318]
+offset_left = -258.0
+offset_top = -118.0
+offset_right = 229.0
+offset_bottom = 158.0
+texture = ExtResource("2_gl6un")
+expand_mode = 1
+stretch_mode = 6

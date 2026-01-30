@@ -1,12 +1,62 @@
 [gd_scene format=3 uid="uid://dchm1jf0isbs"]
 
-[ext_resource type="Script" uid="uid://dtytg755jrh1a" path="res://main_menu.gd" id="1_s2c3o"]
+[ext_resource type="Script" uid="uid://bnftrc3dnawg2" path="res://Scripts/Menu/main_menu.gd" id="1_s2c3o"]
 [ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="2_ma218"]
 [ext_resource type="FontFile" uid="uid://bs84xpuyran7j" path="res://Assets/Fonts/BoldPixels.ttf" id="3_idohh"]
 [ext_resource type="FontFile" uid="uid://dagpd4e5r11m7" path="res://Assets/Fonts/m5x7.ttf" id="4_wfhf6"]
+[ext_resource type="Texture2D" uid="uid://dxb4oh73pc3ig" path="res://Assets/UI/Sprites/UI_Flat_Button01a_4.png" id="5_idohh"]
+[ext_resource type="Texture2D" uid="uid://5jxjncuswfxq" path="res://Assets/UI/Sprites/UI_Flat_Button01a_1.png" id="6_wfhf6"]
+[ext_resource type="AudioStream" uid="uid://yro3rlcdigbu" path="res://Assets/Audio/8-bit-game-2-186976.mp3" id="7_wfhf6"]
 
 [sub_resource type="Theme" id="Theme_3jcrr"]
 default_font = ExtResource("4_wfhf6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3jcrr"]
+texture = ExtResource("5_idohh")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aobxe"]
+texture = ExtResource("6_wfhf6")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_idohh"]
+texture = ExtResource("5_idohh")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="Theme" id="Theme_ab40c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sjh0l"]
+texture = ExtResource("5_idohh")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wfhf6"]
+texture = ExtResource("6_wfhf6")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ab40c"]
+texture = ExtResource("5_idohh")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qki4b"]
+texture = ExtResource("5_idohh")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_byewe"]
+texture = ExtResource("6_wfhf6")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8aa6"]
+texture = ExtResource("5_idohh")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=421932824]
 
@@ -27,39 +77,66 @@ texture = ExtResource("2_ma218")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=267475928]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VainaMask" type="Label" parent="." unique_id=1963359681]
-offset_left = 30.0
-offset_top = 113.0
-offset_right = 296.0
-offset_bottom = 182.0
+[node name="VainaMask" type="Label" parent="MainMenu" unique_id=1963359681]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 97.0
+offset_right = 294.0
+offset_bottom = 166.0
 theme_override_fonts/font = ExtResource("3_idohh")
 theme_override_font_sizes/font_size = 60
 text = "VainaMask"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=338094890]
-offset_left = 71.0
-offset_top = 175.0
-offset_right = 230.0
-offset_bottom = 293.0
+[node name="VBoxContainer2" type="VBoxContainer" parent="MainMenu" unique_id=338094890]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 155.0
+offset_right = 239.0
+offset_bottom = 272.0
 theme = SubResource("Theme_3jcrr")
 
-[node name="BtnPlay" type="Button" parent="VBoxContainer2" unique_id=1788881994]
+[node name="BtnPlay" type="Button" parent="MainMenu/VBoxContainer2" unique_id=1788881994]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.0006938963, 0.0006938974, 0.00069390115, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxTexture_3jcrr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aobxe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_idohh")
 text = "Jugar"
 
-[node name="BtnOptions" type="Button" parent="VBoxContainer2" unique_id=873334489]
+[node name="BtnOptions" type="Button" parent="MainMenu/VBoxContainer2" unique_id=873334489]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
+theme = SubResource("Theme_ab40c")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.627451, 0.627451, 0.627451, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_sjh0l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wfhf6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ab40c")
 text = "Opciones"
 
-[node name="BtnExit" type="Button" parent="VBoxContainer2" unique_id=851399199]
+[node name="BtnExit" type="Button" parent="MainMenu/VBoxContainer2" unique_id=851399199]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.627451, 0.627451, 0.627451, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_qki4b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_byewe")
+theme_override_styles/hover = SubResource("StyleBoxTexture_a8aa6")
 text = "Salir
 "
 
-[connection signal="pressed" from="VBoxContainer2/BtnPlay" to="MainMenu" method="_on_btn_play_pressed"]
-[connection signal="pressed" from="VBoxContainer2/BtnOptions" to="MainMenu" method="_on_btn_options_pressed"]
-[connection signal="pressed" from="VBoxContainer2/BtnExit" to="MainMenu" method="_on_btn_exit_pressed"]
+[node name="BtnSound" type="AudioStreamPlayer2D" parent="MainMenu" unique_id=1549687009]
+stream = ExtResource("7_wfhf6")
+
+[connection signal="pressed" from="MainMenu/VBoxContainer2/BtnPlay" to="MainMenu" method="_on_btn_play_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer2/BtnOptions" to="MainMenu" method="_on_btn_options_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer2/BtnExit" to="MainMenu" method="_on_btn_exit_pressed"]
