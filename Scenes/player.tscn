@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1dl5krurbud"]
 
 [ext_resource type="Script" uid="uid://ud1dyxhar3ms" path="res://Scripts/Player/Player_move.gd" id="1_sweqy"]
+[ext_resource type="Script" uid="uid://c8kslxtqdsbde" path="res://Scripts/Player/camera_2d.gd" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://l1o46q5oa31r" path="res://Assets/Character/16x16 Interact-Sheet.png" id="3_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://dni2nscejrswx" path="res://Assets/Character/16x16 Walk-Sheet.png" id="5_b26j0"]
 
@@ -941,11 +942,14 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(0, -59.079506)
 
 [node name="Player" type="CharacterBody2D" unique_id=1692963863]
-position = Vector2(159, 98)
-scale = Vector2(6.4933467, 6.4933467)
+position = Vector2(-0.9999995, -5.9604645e-08)
 motion_mode = 1
 script = ExtResource("1_sweqy")
 metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=223035789]
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("2_vgqql")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1193407763]
 visible = false
