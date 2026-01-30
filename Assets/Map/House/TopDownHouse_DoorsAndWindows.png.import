@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c27rk5osk0px3"
-path="res://.godot/imported/interior free.png-465645cdec4a302daafe123c1ab71785.ctex"
+uid="uid://bvc6u0ah4xhr1"
+path="res://.godot/imported/TopDownHouse_DoorsAndWindows.png-ebb7164cc68d21f2cb20d68b3877d489.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map/House/interior free/interior free.png"
-dest_files=["res://.godot/imported/interior free.png-465645cdec4a302daafe123c1ab71785.ctex"]
+source_file="res://Assets/Map/House/TopDownHouse_DoorsAndWindows.png"
+dest_files=["res://.godot/imported/TopDownHouse_DoorsAndWindows.png-ebb7164cc68d21f2cb20d68b3877d489.ctex"]
 
 [params]
 
