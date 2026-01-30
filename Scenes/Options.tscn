@@ -1,14 +1,96 @@
 [gd_scene format=3 uid="uid://cc1tpaac7kldo"]
 
-[ext_resource type="Texture2D" uid="uid://vhksrle48fbc" path="res://icon.svg" id="1_qqnya"]
+[ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="1_5hy3q"]
+[ext_resource type="Script" uid="uid://dx0j3e8onumpr" path="res://Scripts/Menu/options_menu.gd" id="1_cbhj7"]
+[ext_resource type="FontFile" uid="uid://bs84xpuyran7j" path="res://Assets/Fonts/BoldPixels.ttf" id="2_cbhj7"]
+[ext_resource type="FontFile" uid="uid://dagpd4e5r11m7" path="res://Assets/Fonts/m5x7.ttf" id="3_q4at1"]
+[ext_resource type="Texture2D" uid="uid://dxb4oh73pc3ig" path="res://Assets/UI/Sprites/UI_Flat_Button01a_4.png" id="5_bdxpv"]
+[ext_resource type="AudioStream" uid="uid://yro3rlcdigbu" path="res://Assets/Audio/8-bit-game-2-186976.mp3" id="5_q4at1"]
+[ext_resource type="Texture2D" uid="uid://5jxjncuswfxq" path="res://Assets/UI/Sprites/UI_Flat_Button01a_1.png" id="6_cja8r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pke3u"]
+texture = ExtResource("5_bdxpv")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kfnrp"]
+texture = ExtResource("6_cja8r")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tcskm"]
+texture = ExtResource("5_bdxpv")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
 
 [node name="Node2D" type="Node2D" unique_id=1221548728]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=946267390]
-position = Vector2(126, 139)
-texture = ExtResource("1_qqnya")
+[node name="OptionsMenu" type="Control" parent="." unique_id=16445680]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cbhj7")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=548055492]
-position = Vector2(256, 163)
-scale = Vector2(0.4921875, 0.5)
-texture = ExtResource("1_qqnya")
+[node name="TextureRect" type="TextureRect" parent="OptionsMenu" unique_id=516431068]
+layout_mode = 0
+offset_right = 481.0
+offset_bottom = 269.0
+texture = ExtResource("1_5hy3q")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="LabelOptions" type="Label" parent="OptionsMenu" unique_id=1343879695]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 113.0
+offset_right = 198.0
+offset_bottom = 149.0
+theme_override_fonts/font = ExtResource("2_cbhj7")
+theme_override_font_sizes/font_size = 40
+text = "OPCIONES"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu" unique_id=392197954]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 172.0
+offset_right = 451.0
+offset_bottom = 286.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/VBoxContainer" unique_id=1801487887]
+layout_mode = 2
+
+[node name="BtnFullScreen" type="CheckButton" parent="OptionsMenu/VBoxContainer/VBoxContainer" unique_id=330577526]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q4at1")
+text = "Pantalla completa"
+
+[node name="BoxContainer" type="BoxContainer" parent="OptionsMenu/VBoxContainer/VBoxContainer" unique_id=930512551]
+layout_mode = 2
+
+[node name="LabelSound" type="Label" parent="OptionsMenu/VBoxContainer/VBoxContainer/BoxContainer" unique_id=1341009311]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q4at1")
+text = "Volumen"
+
+[node name="HSlider" type="HSlider" parent="OptionsMenu/VBoxContainer/VBoxContainer/BoxContainer" unique_id=218593257]
+layout_mode = 2
+
+[node name="BtnAtras" type="Button" parent="OptionsMenu/VBoxContainer" unique_id=1253297789]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.625597, 0.625597, 0.625598, 1)
+theme_override_fonts/font = ExtResource("3_q4at1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pke3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kfnrp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tcskm")
+text = "Atras"
+
+[node name="BtnSound" type="AudioStreamPlayer2D" parent="OptionsMenu" unique_id=319151407]
+stream = ExtResource("5_q4at1")
+
+[connection signal="toggled" from="OptionsMenu/VBoxContainer/VBoxContainer/BtnFullScreen" to="OptionsMenu" method="_on_btn_full_screen_toggled"]
+[connection signal="pressed" from="OptionsMenu/VBoxContainer/BtnAtras" to="OptionsMenu" method="_on_button_pressed"]
+[connection signal="pressed" from="OptionsMenu/VBoxContainer/BtnAtras" to="OptionsMenu" method="_on_btn_atras_pressed"]
