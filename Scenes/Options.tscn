@@ -4,9 +4,13 @@
 [ext_resource type="Script" uid="uid://dx0j3e8onumpr" path="res://Scripts/Menu/options_menu.gd" id="1_cbhj7"]
 [ext_resource type="FontFile" uid="uid://bs84xpuyran7j" path="res://Assets/Fonts/BoldPixels.ttf" id="2_cbhj7"]
 [ext_resource type="FontFile" uid="uid://dagpd4e5r11m7" path="res://Assets/Fonts/m5x7.ttf" id="3_q4at1"]
+[ext_resource type="Texture2D" uid="uid://b1f65b54pf6yv" path="res://Assets/UI/Sprites/UI_Flat_Frame03a.png" id="4_cja8r"]
 [ext_resource type="Texture2D" uid="uid://dxb4oh73pc3ig" path="res://Assets/UI/Sprites/UI_Flat_Button01a_4.png" id="5_bdxpv"]
 [ext_resource type="AudioStream" uid="uid://yro3rlcdigbu" path="res://Assets/Audio/8-bit-game-2-186976.mp3" id="5_q4at1"]
 [ext_resource type="Texture2D" uid="uid://5jxjncuswfxq" path="res://Assets/UI/Sprites/UI_Flat_Button01a_1.png" id="6_cja8r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fry7h"]
+texture = ExtResource("4_cja8r")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pke3u"]
 texture = ExtResource("5_bdxpv")
@@ -34,8 +38,9 @@ script = ExtResource("1_cbhj7")
 
 [node name="TextureRect" type="TextureRect" parent="OptionsMenu" unique_id=516431068]
 layout_mode = 0
+offset_top = 2.0
 offset_right = 481.0
-offset_bottom = 269.0
+offset_bottom = 271.0
 texture = ExtResource("1_5hy3q")
 expand_mode = 1
 stretch_mode = 6
@@ -51,30 +56,51 @@ theme_override_font_sizes/font_size = 40
 text = "OPCIONES"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu" unique_id=392197954]
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 0
 offset_left = 258.0
-offset_top = 172.0
-offset_right = 451.0
-offset_bottom = 286.0
+offset_top = 169.0
+offset_right = 471.0
+offset_bottom = 272.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/VBoxContainer" unique_id=1801487887]
+[node name="PanelContainer" type="PanelContainer" parent="OptionsMenu/VBoxContainer" unique_id=1690118472]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fry7h")
+
+[node name="MarginContainer" type="MarginContainer" parent="OptionsMenu/VBoxContainer/PanelContainer" unique_id=2105494427]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu/VBoxContainer/PanelContainer/MarginContainer" unique_id=1801487887]
 layout_mode = 2
 
-[node name="BtnFullScreen" type="CheckButton" parent="OptionsMenu/VBoxContainer/VBoxContainer" unique_id=330577526]
+[node name="BtnFullScreen" type="CheckButton" parent="OptionsMenu/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=330577526]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_q4at1")
 text = "Pantalla completa"
 
-[node name="BoxContainer" type="BoxContainer" parent="OptionsMenu/VBoxContainer/VBoxContainer" unique_id=930512551]
+[node name="MarginContainer" type="MarginContainer" parent="OptionsMenu/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=352472047]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="BoxContainer" type="BoxContainer" parent="OptionsMenu/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=930512551]
 layout_mode = 2
 
-[node name="LabelSound" type="Label" parent="OptionsMenu/VBoxContainer/VBoxContainer/BoxContainer" unique_id=1341009311]
+[node name="LabelSound" type="Label" parent="OptionsMenu/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/BoxContainer" unique_id=1341009311]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_q4at1")
 text = "Volumen"
 
-[node name="HSlider" type="HSlider" parent="OptionsMenu/VBoxContainer/VBoxContainer/BoxContainer" unique_id=218593257]
+[node name="HSlider" type="HSlider" parent="OptionsMenu/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/BoxContainer" unique_id=218593257]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+size_flags_horizontal = 8
 
 [node name="BtnAtras" type="Button" parent="OptionsMenu/VBoxContainer" unique_id=1253297789]
 custom_minimum_size = Vector2(30, 30)
@@ -91,6 +117,7 @@ text = "Atras"
 [node name="BtnSound" type="AudioStreamPlayer2D" parent="OptionsMenu" unique_id=319151407]
 stream = ExtResource("5_q4at1")
 
-[connection signal="toggled" from="OptionsMenu/VBoxContainer/VBoxContainer/BtnFullScreen" to="OptionsMenu" method="_on_btn_full_screen_toggled"]
+[connection signal="toggled" from="OptionsMenu/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/BtnFullScreen" to="OptionsMenu" method="_on_btn_full_screen_toggled"]
+[connection signal="value_changed" from="OptionsMenu/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/BoxContainer/HSlider" to="OptionsMenu" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="OptionsMenu/VBoxContainer/BtnAtras" to="OptionsMenu" method="_on_button_pressed"]
 [connection signal="pressed" from="OptionsMenu/VBoxContainer/BtnAtras" to="OptionsMenu" method="_on_btn_atras_pressed"]
