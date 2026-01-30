@@ -1,19 +1,24 @@
 [gd_scene format=3 uid="uid://b7pno4jujasmt"]
 
 [ext_resource type="Texture2D" uid="uid://vhksrle48fbc" path="res://icon.svg" id="1_iukft"]
-[ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="2_gl6un"]
+[ext_resource type="Texture2D" uid="uid://dsj3gc03m00qt" path="res://Assets/Menu/caracas.jpeg" id="2_gl6un"]
+[ext_resource type="PackedScene" uid="uid://c70uoh5xh43mf" path="res://Scenes/jugador.tscn" id="3_j5yw3"]
 
 [node name="Node2D" type="Node2D" unique_id=806564061]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2061823836]
-position = Vector2(256, 114)
+position = Vector2(206, 131)
 texture = ExtResource("1_iukft")
 
 [node name="TextureRect" type="TextureRect" parent="Sprite2D" unique_id=491959318]
-offset_left = -258.0
-offset_top = -118.0
-offset_right = 229.0
-offset_bottom = 158.0
+offset_left = -205.0
+offset_top = -132.0
+offset_right = 282.0
+offset_bottom = 144.0
 texture = ExtResource("2_gl6un")
 expand_mode = 1
 stretch_mode = 6
+
+[node name="Jugador" parent="." unique_id=504297168 instance=ExtResource("3_j5yw3")]
+position = Vector2(4, 13.000008)
+scale = Vector2(0.4773696, 0.40354022)

@@ -11,4 +11,4 @@ position = Vector2(103, 63)
 visible = false
 position = Vector2(0, -2.3499113e-06)
 scale = Vector2(0.15400377, 0.15400377)
-zoom = Vector2(1.2, 1.2)
+zoom = Vector2(0.8, 0.8)
