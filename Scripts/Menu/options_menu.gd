@@ -26,3 +26,8 @@ func _on_btn_full_screen_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+func _on_h_slider_value_changed(value: float) -> void:
+	# '0' es el bus maestro de audio en Godot
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)
