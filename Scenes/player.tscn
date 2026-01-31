@@ -941,15 +941,17 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(0, -59.079506)
 
 [node name="Player" type="CharacterBody2D" unique_id=1692963863]
-position = Vector2(159, 98)
-scale = Vector2(6.4933467, 6.4933467)
+position = Vector2(-0.9999995, -5.9604645e-08)
 motion_mode = 1
 script = ExtResource("1_sweqy")
 metadata/_edit_group_ = true
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1938036034]
+position = Vector2(-4.7683716e-07, 5.9604645e-08)
+zoom = Vector2(2, 2)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1193407763]
-visible = false
-position = Vector2(0, 0.5)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_n7ghd")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=118910512]
