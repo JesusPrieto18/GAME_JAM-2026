@@ -14,6 +14,8 @@ var writing = false
 @onready var audio = $SpeakSound
 @onready var name_label = $ContainerName/Name
 
+signal end_dialogue_signal
+
 ####################### FUNCIONES INICIALES ######################### 	
 
 # Called when the node enters the scene tree for the first time.
@@ -30,10 +32,13 @@ func _process(delta: float) -> void:
 
 func start_scene_dialogues(scene_num: int):
 	var scene_dialogues = GameManager.dialogues[scene_num]
+	print("AAAAAAA")
+	print(scene_dialogues)
+	print(scene_dialogues[0])
 	
-	for i in scene_dialogues.length():
-		start_dialogue(scene_dialogues["name"], scene_dialogues["text"])
-		await get_tree().create_timer(0.2).timeout
+	for i in scene_dialogues.size(): 
+		start_dialogue(scene_dialogues[i]["name"], scene_dialogues[i]["text"])
+		await end_dialogue_signal
 
 func start_dialogue(name: String, array_dialogues: Array):
 	GameManager.are_dialogues_on = true
@@ -80,6 +85,7 @@ func end_dialogue():
 	index = 0
 	# Avisamos al GameManager que el diálogo terminó
 	GameManager.are_dialogues_on = false
+	emit_signal("end_dialogue_signal")
 
 
 

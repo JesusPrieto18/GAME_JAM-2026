@@ -70,7 +70,7 @@ var dialogues = {
 			{
 				"name": "Mamá",
 				"text": [
-					"¡{name_player}! Ven a ayudarme con el almuerzo", 
+					"¡" + name_player + "! Ven a ayudarme con el almuerzo", 
 				]
 			},	
 			
