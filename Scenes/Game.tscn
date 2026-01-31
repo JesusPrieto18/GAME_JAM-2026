@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bt41xyb7k85vb"]
 
 [ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="2_gl6un"]
-[ext_resource type="PackedScene" uid="uid://d1dl5krurbud" path="res://Scenes/player.tscn" id="2_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://d1dl5krurbud" path="res://Scenes/Jugador/player.tscn" id="2_j5yw3"]
 
 [node name="Node2D" type="Node2D" unique_id=806564061]
 

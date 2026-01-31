@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+@export var SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 var is_interacting = false 
@@ -36,6 +36,18 @@ func _physics_process(delta: float) -> void:
 		init_interaction()
 	move_and_slide()
 	
+	collision_rock()
+	
+func collision_rock():
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		var object_colide = collision.get_collider()
+		
+		if object_colide is RigidBody2D:
+			var force = 100
+			object_colide.apply_central_impulse(-collision.get_normal() * force)
+			velocity = velocity * 0.5
+			
 func init_interaction():
 	is_interacting = true
 	state_machine.travel("Interact")

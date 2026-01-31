@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://xitqjr0dhqmr"]
+
+[ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="1_3mhdu"]
+[ext_resource type="PackedScene" uid="uid://bnyfdc1g4lmge" path="res://Scenes/MangoTree/boton.tscn" id="2_fyxaw"]
+[ext_resource type="PackedScene" uid="uid://chhirpmfb1esg" path="res://Scenes/MangoTree/fondo.tscn" id="2_xhfbp"]
+[ext_resource type="PackedScene" uid="uid://bchd78sfx4h2q" path="res://Scenes/MangoTree/piedra.tscn" id="3_orh5m"]
+[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="4_wsb7y"]
+[ext_resource type="PackedScene" uid="uid://cktbcnmvhf6aq" path="res://Scenes/MangoTree/puerta.tscn" id="5_f633e"]
+
+[node name="MangoTree" type="Node2D" unique_id=1852751464]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1786713292]
+offset_right = 1024.0
+offset_bottom = 1024.0
+texture = ExtResource("1_3mhdu")
+
+[node name="Fondo" parent="." unique_id=1865440631 instance=ExtResource("2_xhfbp")]
+position = Vector2(292, 124)
+
+[node name="Boton2" parent="." unique_id=1358981793 instance=ExtResource("2_fyxaw")]
+position = Vector2(140, 95)
+scale = Vector2(0.3, 0.3)
+
+[node name="Boton" parent="." unique_id=752356381 instance=ExtResource("2_fyxaw")]
+position = Vector2(140, 125)
+scale = Vector2(0.3, 0.3)
+
+[node name="Piedra" parent="." unique_id=2109547409 instance=ExtResource("3_orh5m")]
+position = Vector2(140, 47)
+
+[node name="Piedra2" parent="." unique_id=1241205752 instance=ExtResource("3_orh5m")]
+position = Vector2(183, 74)
+
+[node name="Piedra3" parent="." unique_id=1448236779 instance=ExtResource("3_orh5m")]
+position = Vector2(87, 125)
+
+[node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("4_wsb7y")]
+
+[node name="Puerta" parent="." unique_id=1497246633 node_paths=PackedStringArray("list_of_button") instance=ExtResource("5_f633e")]
+position = Vector2(255, 47)
+list_of_button = [NodePath("../Boton"), NodePath("../Boton2")]

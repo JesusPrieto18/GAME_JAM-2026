@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bnyfdc1g4lmge"]
+
+[ext_resource type="Texture2D" uid="uid://i78q4wecd3n6" path="res://Assets/UI/Spritesheets/Spritesheet_UI_Flat_Animated.png" id="1_1el21"]
+[ext_resource type="Script" uid="uid://dm664ko7n7hgw" path="res://Scripts/Puzzles/boton.gd" id="1_mt4we"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mt4we"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7qh8"]
+atlas = ExtResource("1_1el21")
+region = Rect2(1, 101, 30, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfayi"]
+size = Vector2(30, 26)
+
+[node name="Boton" type="Area2D" unique_id=752356381]
+monitorable = false
+script = ExtResource("1_mt4we")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=367473994]
+material = SubResource("CanvasItemMaterial_mt4we")
+texture = SubResource("AtlasTexture_i7qh8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1779941357]
+shape = SubResource("RectangleShape2D_bfayi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

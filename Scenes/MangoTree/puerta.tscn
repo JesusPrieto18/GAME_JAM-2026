@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cktbcnmvhf6aq"]
+
+[ext_resource type="Script" uid="uid://bngq8dlrd6j7x" path="res://Scripts/Puzzles/puerta.gd" id="1_2vmd3"]
+[ext_resource type="Texture2D" uid="uid://d1je6ls6ssvdn" path="res://Assets/Map/Dungeons/decorative.png" id="1_limbx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tswu4"]
+atlas = ExtResource("1_limbx")
+region = Rect2(88, 69, 16, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nvjv"]
+size = Vector2(16, 27)
+
+[node name="Puerta" type="StaticBody2D" unique_id=1497246633]
+script = ExtResource("1_2vmd3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=391674412]
+texture = SubResource("AtlasTexture_tswu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=994792320]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_0nvjv")

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://chhirpmfb1esg"]
+
+[ext_resource type="Texture2D" uid="uid://cxpgw3w17pvqp" path="res://Assets/Map/Dungeons/mainlevbuild.png" id="1_3htt2"]
+[ext_resource type="Script" uid="uid://diimr3n0r5e0a" path="res://Scripts/Puzzles/fondo.gd" id="1_6prq4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15764"]
+atlas = ExtResource("1_3htt2")
+region = Rect2(624, 309, 33, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15764"]
+size = Vector2(16, 18)
+
+[node name="Fondo" type="Area2D" unique_id=1865440631]
+monitorable = false
+script = ExtResource("1_6prq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2087392960]
+position = Vector2(-2.682209e-07, 0)
+scale = Vector2(0.48484847, 0.6666667)
+texture = SubResource("AtlasTexture_15764")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=661218170]
+visible = false
+shape = SubResource("RectangleShape2D_15764")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
