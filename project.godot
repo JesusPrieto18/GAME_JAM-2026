@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="GameJAM-2026"
-run/main_scene="res://Scenes/player.tscn"
+run/main_scene="uid://dchm1jf0isbs"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://y8obbp1istvd"
 
 [display]
 
