@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dchm1jf0isbs"]
 
 [ext_resource type="Script" uid="uid://bnftrc3dnawg2" path="res://Scripts/Menu/main_menu.gd" id="1_s2c3o"]
-[ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="2_ma218"]
-[ext_resource type="FontFile" uid="uid://bs84xpuyran7j" path="res://Assets/Fonts/BoldPixels.ttf" id="3_idohh"]
-[ext_resource type="FontFile" uid="uid://dagpd4e5r11m7" path="res://Assets/Fonts/m5x7.ttf" id="4_wfhf6"]
+[ext_resource type="Texture2D" uid="uid://dsj3gc03m00qt" path="res://Assets/Menu/caracas.jpeg" id="2_ma218"]
+[ext_resource type="FontFile" uid="uid://deyraji7twmcu" path="res://Assets/Fonts/BoldPixels.ttf" id="3_idohh"]
+[ext_resource type="FontFile" uid="uid://b3diuupqlrvgv" path="res://Assets/Fonts/m5x7.ttf" id="4_wfhf6"]
 [ext_resource type="Texture2D" uid="uid://dxb4oh73pc3ig" path="res://Assets/UI/Sprites/UI_Flat_Button01a_4.png" id="5_idohh"]
 [ext_resource type="Texture2D" uid="uid://5jxjncuswfxq" path="res://Assets/UI/Sprites/UI_Flat_Button01a_1.png" id="6_wfhf6"]
 [ext_resource type="AudioStream" uid="uid://yro3rlcdigbu" path="res://Assets/Audio/8-bit-game-2-186976.mp3" id="7_wfhf6"]
