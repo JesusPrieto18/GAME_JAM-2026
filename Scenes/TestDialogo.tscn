@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://b6cf8dwvl8gq0"]
 
 [ext_resource type="Script" uid="uid://x3sff1pufdmr" path="res://Scripts/Dialogues/tilemap_layers.gd" id="1_u0qem"]
-[ext_resource type="Texture2D" uid="uid://dqbun1tcg24p2" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_uclie"]
-[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/jugador.tscn" id="2_raius"]
+[ext_resource type="Texture2D" uid="uid://lvf17t5gx3jy" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_uclie"]
+[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="2_raius"]
 [ext_resource type="Texture2D" uid="uid://5jxjncuswfxq" path="res://Assets/UI/Sprites/UI_Flat_Button01a_1.png" id="3_e111o"]
 [ext_resource type="Script" uid="uid://bc5532shcx4u8" path="res://Scripts/Dialogues/dialogue_box.gd" id="3_raius"]
 [ext_resource type="AudioStream" uid="uid://cm5uogsmyn5lg" path="res://Assets/Audio/video-game-speak-358238.mp3" id="4_0ayms"]

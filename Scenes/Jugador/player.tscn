@@ -944,6 +944,7 @@ graph_offset = Vector2(34, -20.079506)
 position = Vector2(-0.9999995, -5.9604645e-08)
 motion_mode = 1
 script = ExtResource("1_sweqy")
+SPEED = 150.0
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=674262309]

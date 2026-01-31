@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://hj3pdevrpffn"]
 
 [ext_resource type="Texture2D" uid="uid://lvf17t5gx3jy" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_gqag4"]
-[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/jugador.tscn" id="2_2sy5y"]
+[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="2_2sy5y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qicg7"]
 texture = ExtResource("1_gqag4")
