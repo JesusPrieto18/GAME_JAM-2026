@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bchd78sfx4h2q"]
+
+[ext_resource type="Texture2D" uid="uid://c3nnwo6h2sn54" path="res://Assets/Map/Dungeons/All Tiles Free Ver..png" id="1_ijgo7"]
+[ext_resource type="Script" uid="uid://c3g4u8tsh2k8d" path="res://Scenes/MangoTree/piedra.gd" id="1_nu0du"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oljlp"]
+size = Vector2(16, 16)
+
+[node name="Piedra" type="RigidBody2D" unique_id=2109547409]
+mass = 10.0
+gravity_scale = 0.0
+linear_damp = 10.0
+script = ExtResource("1_nu0du")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=342699965]
+texture = ExtResource("1_ijgo7")
+region_enabled = true
+region_rect = Rect2(96, 32, 16, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1734388639]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_oljlp")
