@@ -13,7 +13,7 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	var input_vector = Input.get_vector("Left", "Right", "Up", "Down")
-	
+	##print(global_position)
 	if is_interacting:
 		velocity = Vector2.ZERO
 		move_and_slide()

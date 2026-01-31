@@ -14,6 +14,10 @@ func _process(delta: float) -> void:
 ### DATOS DEL JUGADOR ###
 var name_player = "El niñe"
 
+### INVENTARIO ###
+
+var container = [null, null, null, null, null]
+
 ### LOGICA DE LA HISTORIA ####
 var tuqueque_free = false
 

@@ -1,19 +1,12 @@
 [gd_scene format=3 uid="uid://bt41xyb7k85vb"]
 
-[ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="2_gl6un"]
-[ext_resource type="PackedScene" uid="uid://d1dl5krurbud" path="res://Scenes/Jugador/player.tscn" id="2_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://duoiydt1k3nb7" path="res://Scenes/MangoTree/puzzle_2.tscn" id="1_gl6un"]
+[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="2_j5yw3"]
 
-[node name="Node2D" type="Node2D" unique_id=806564061]
+[node name="Game" type="Node2D" unique_id=806564061]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=491959318]
-offset_left = -2.0
-offset_top = -4.0
-offset_right = 485.0
-offset_bottom = 272.0
-texture = ExtResource("2_gl6un")
-expand_mode = 1
-stretch_mode = 6
+[node name="Puzzle2" parent="." unique_id=581298973 instance=ExtResource("1_gl6un")]
+position = Vector2(291, 45)
 
-[node name="Player" parent="." unique_id=1692963863 instance=ExtResource("2_j5yw3")]
-position = Vector2(117.99999, 56)
-scale = Vector2(1.0019127, 1)
+[node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("2_j5yw3")]
+position = Vector2(294, 145)

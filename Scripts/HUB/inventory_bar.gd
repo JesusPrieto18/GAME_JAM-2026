@@ -1,7 +1,5 @@
 extends Control
 
-var container = [null, null, null, null, null]
-
 var position_container = {
 	0: Vector2(43.5, 19.5),
 	1: Vector2(81.5, 19.5),
@@ -40,9 +38,9 @@ func change_slot(nuevo_indice):
 	select.position = position_container.get(slot_select)
 
 func add_object(item: ItemData) -> bool:
-	for i in range(container.size()):
-		if container[i] == null:
-			container[i] = item
+	for i in range(GameManager.container.size()):
+		if GameManager.container[i] == null:
+			GameManager.container[i] = item
 			update_slot(i, item)
 			return true
 			

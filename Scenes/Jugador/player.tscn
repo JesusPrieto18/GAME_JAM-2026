@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dni2nscejrswx" path="res://Assets/Character/16x16 Walk-Sheet.png" id="5_b26j0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7ghd"]
-size = Vector2(12, 17)
+size = Vector2(8, 7)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sweqy"]
 load_path = "res://.godot/imported/16x16 Idle-Sheet.png-9ed86ef49a567026d2ae84335c894536.ctex"
@@ -952,7 +952,7 @@ position = Vector2(0, 5.9604645e-08)
 zoom = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1193407763]
-position = Vector2(0, 1.5)
+position = Vector2(-3.5762787e-07, 6.5)
 shape = SubResource("RectangleShape2D_n7ghd")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=118910512]

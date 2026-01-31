@@ -32,8 +32,12 @@ func player_respawn(body):
 		body.global_position = respawn.global_position
 
 func fill_out(body: RigidBody2D):
-	is_empty = false
 	var piedra_sprite = body.get_node("Sprite2D")
+	if not piedra_sprite:
+		return 
+	else:
+		is_empty = false
+
 	body.remove_child(piedra_sprite)
 	
 	add_child(piedra_sprite)
