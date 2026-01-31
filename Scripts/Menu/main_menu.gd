@@ -19,7 +19,7 @@ func _on_btn_play_pressed() -> void:
 	# Espera un poco para que se vea la animacion y se escuche el sonido
 	await get_tree().create_timer(0.15).timeout
 	# Cambiar de escena para jugar 
-	get_tree().change_scene_to_file("res://Scenes/Game.tscn")
+	get_tree().change_scene_to_file("res://Scenes/HomeScene.tscn")
 
 func _on_btn_options_pressed() -> void:
 	# Reproduce el sonido
