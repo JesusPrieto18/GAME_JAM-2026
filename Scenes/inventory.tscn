@@ -1,35 +1,262 @@
 [gd_scene format=3 uid="uid://dl3vqjv67hli7"]
 
-[node name="Inventory" type="Control" unique_id=222158163]
+[ext_resource type="Texture2D" uid="uid://dv6p2koik8sw" path="res://Assets/UI/Spritesheets/Spritesheet_UI_Flat.png" id="1_wdn4f"]
+[ext_resource type="Script" uid="uid://cskhm8gvur1s8" path="res://Scripts/HUB/inventory_bar.gd" id="1_yxepq"]
+[ext_resource type="Texture2D" uid="uid://i78q4wecd3n6" path="res://Assets/UI/Spritesheets/Spritesheet_UI_Flat_Animated.png" id="2_k5gp2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5gp2"]
+atlas = ExtResource("1_wdn4f")
+region = Rect2(481, 139, 30, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxepq"]
+atlas = ExtResource("1_wdn4f")
+region = Rect2(683, 75, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n8tc"]
+atlas = ExtResource("2_k5gp2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1vlg"]
+atlas = ExtResource("2_k5gp2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5ffv"]
+atlas = ExtResource("2_k5gp2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sd8fj"]
+atlas = ExtResource("2_k5gp2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trvqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n8tc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1vlg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5ffv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sd8fj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="HUD" type="CanvasLayer" unique_id=2055821665]
+metadata/_edit_vertical_guides_ = [164.0]
+metadata/_edit_horizontal_guides_ = [231.0]
+
+[node name="InventoryBar" type="Control" parent="." unique_id=781907137]
 layout_mode = 3
+anchor_top = 0.707
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.11000061
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_yxepq")
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar" unique_id=2062409476]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 20
 
-[node name="ItemList" type="ItemList" parent="." unique_id=1103491606]
-clip_contents = false
+[node name="TextureRect" type="TextureRect" parent="InventoryBar/MarginContainer" unique_id=2137430522]
+layout_mode = 2
+texture = SubResource("AtlasTexture_k5gp2")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer" unique_id=1889012520]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InventoryBar/MarginContainer/MarginContainer" unique_id=15245328]
+layout_mode = 2
+theme_override_constants/separation = 9
+alignment = 1
+
+[node name="Slot" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=182941640]
+layout_mode = 2
+texture = SubResource("AtlasTexture_yxepq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot" unique_id=61734250]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.83000004
-anchor_right = 0.90000004
-anchor_bottom = 0.93700004
-offset_top = -0.1000061
-offset_right = -3.0517578e-05
-offset_bottom = 0.009994507
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-allow_rmb_select = true
-tile_scroll_hint = true
-item_count = 3
-max_columns = 9
-same_column_width = true
-item_0/text = "1"
-item_0/selectable = false
-item_1/text = "2"
-item_2/text = "3"
-metadata/_edit_use_anchors_ = true
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="Slot2" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=336465670]
+layout_mode = 2
+texture = SubResource("AtlasTexture_yxepq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot2" unique_id=847435777]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="Slot3" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=88989245]
+layout_mode = 2
+texture = SubResource("AtlasTexture_yxepq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot3" unique_id=2109026064]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="Slot4" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=427678953]
+layout_mode = 2
+texture = SubResource("AtlasTexture_yxepq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot4" unique_id=1614253150]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="Slot5" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=1035258067]
+layout_mode = 2
+texture = SubResource("AtlasTexture_yxepq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot5" unique_id=1430445669]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="Slot6" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=735921299]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_yxepq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot6" unique_id=37850027]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="Slot7" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=994735441]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_yxepq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot7" unique_id=1113178411]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="Slot8" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=1238865104]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_yxepq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot8" unique_id=277387392]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="Slot9" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=1830657937]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_yxepq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot9" unique_id=102278956]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="InventoryBar/MarginContainer/MarginContainer" unique_id=904136553]
+position = Vector2(195.49995, 19.5)
+scale = Vector2(1.1562495, 1.2187502)
+sprite_frames = SubResource("SpriteFrames_trvqw")
+frame_progress = 0.55552423

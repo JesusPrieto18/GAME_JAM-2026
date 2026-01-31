@@ -1,0 +1,40 @@
+extends Control
+
+var container = [null, null, null, null, null]
+
+var position_container = {
+	0: Vector2(43.5, 19.5),
+	1: Vector2(81.5, 19.5),
+	2: Vector2(119.5, 19.5),
+	3: Vector2(157.5, 19.5),
+	4: Vector2(195.5, 19.5)
+}
+
+@onready var select = $MarginContainer/MarginContainer/AnimatedSprite2D
+var slot_select = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	select.position = position_container.get(slot_select)
+	select.play("default")
+
+func _input(event: InputEvent) -> void:
+# Detectar teclas del 1 al 9 para seleccionar
+	if event is InputEventKey and event.pressed:
+		if event.keycode >= KEY_1 and event.keycode <= KEY_5:
+		# Convertimos la tecla 1 (código 49) a índice 0
+			change_slot(event.keycode - KEY_1)
+			
+func change_slot(nuevo_indice):
+	# Asegurarnos de que el índice no se salga de 0 a 8 (Loop)
+	if nuevo_indice > 5: 
+		nuevo_indice = 0
+	if nuevo_indice < 0: 
+		nuevo_indice = 5 
+		
+	slot_select = nuevo_indice
+	select.position = position_container.get(slot_select)
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
