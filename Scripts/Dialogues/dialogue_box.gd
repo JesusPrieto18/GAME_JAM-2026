@@ -12,6 +12,7 @@ var writing = false
 @onready var label = $RichTextLabel
 @onready var timer = $Timer
 @onready var audio = $SpeakSound
+@onready var name_label = $ContainerName/Name
 
 ######################### FUNCIONES X ######################### 	
 
@@ -27,8 +28,9 @@ func _process(delta: float) -> void:
 
 ################### FUNCIONES DE DIALOGOS ######################### 	
 
-func start_dialogue(array_dialogues: Array):
+func start_dialogue(name: String, array_dialogues: Array):
 	GameManager.are_dialogues_on = true
+	name_label.text = name
 	dialogues = array_dialogues
 	index = 0
 	

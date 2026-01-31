@@ -14,11 +14,9 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player": 
 		
-		var dialogues = GameManager.dialogues["scene1"]["boy1"]
+		var dialogues_ = GameManager.dialogues["scene1"]
 		# Accedemos al cuadro de diálogo y llamamos a su función
-		$CanvasLayer/DialogueBox.start_dialogue(dialogues)
-		print("Hola ", GameManager.name_player)
-		GameManager.name_player = "Juanito"
+		$CanvasLayer/DialogueBox.start_dialogue(dialogues_["name"], dialogues_["text"] )
 	else:
 		print("Print malvada sea")
 		print("Ha entrado: ", body.name)

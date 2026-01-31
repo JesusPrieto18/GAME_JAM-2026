@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://x3sff1pufdmr" path="res://Scripts/Dialogues/tilemap_layers.gd" id="1_u0qem"]
 [ext_resource type="Texture2D" uid="uid://dqbun1tcg24p2" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_uclie"]
 [ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/jugador.tscn" id="2_raius"]
+[ext_resource type="Texture2D" uid="uid://5jxjncuswfxq" path="res://Assets/UI/Sprites/UI_Flat_Button01a_1.png" id="3_e111o"]
 [ext_resource type="Script" uid="uid://bc5532shcx4u8" path="res://Scripts/Dialogues/dialogue_box.gd" id="3_raius"]
 [ext_resource type="AudioStream" uid="uid://cm5uogsmyn5lg" path="res://Assets/Audio/video-game-speak-358238.mp3" id="4_0ayms"]
+[ext_resource type="Texture2D" uid="uid://ck0vxpnpo15dv" path="res://Assets/UI/Sprites/UI_Flat_Bar10a.png" id="5_blil1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0qem"]
 texture = ExtResource("1_uclie")
@@ -255,6 +257,15 @@ texture = ExtResource("1_uclie")
 [sub_resource type="TileSet" id="TileSet_0ayms"]
 sources/1 = SubResource("TileSetAtlasSource_u0qem")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_blil1"]
+texture = ExtResource("3_e111o")
+texture_margin_left = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_am24c"]
+texture = ExtResource("5_blil1")
+
 [sub_resource type="Animation" id="Animation_u0qem"]
 length = 0.001
 tracks/0/type = "value"
@@ -316,23 +327,41 @@ offset_left = 2.0
 offset_top = 193.0
 offset_right = 482.0
 offset_bottom = 270.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_blil1")
 script = ExtResource("3_raius")
+
+[node name="ContainerName" type="Panel" parent="TilemapLayers/CanvasLayer/DialogueBox" unique_id=530066857]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -3.0
+offset_right = 103.0
+offset_bottom = 27.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_am24c")
+
+[node name="Name" type="Label" parent="TilemapLayers/CanvasLayer/DialogueBox/ContainerName" unique_id=600782252]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 26.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TilemapLayers/CanvasLayer/DialogueBox" unique_id=1446386699]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 14.0
-offset_right = 442.0
-offset_bottom = 65.0
+offset_left = 17.0
+offset_top = 30.0
+offset_right = 468.0
+offset_bottom = 68.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="TilemapLayers/CanvasLayer/DialogueBox" unique_id=825913924]
 
 [node name="IndicatorEnter" type="Label" parent="TilemapLayers/CanvasLayer/DialogueBox" unique_id=1888932658]
 layout_mode = 0
-offset_left = 405.0
-offset_top = 43.0
-offset_right = 470.0
-offset_bottom = 66.0
+offset_left = 415.0
+offset_top = 49.0
+offset_right = 480.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "[ENTER]"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TilemapLayers/CanvasLayer/DialogueBox" unique_id=269888477]
