@@ -34,7 +34,6 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("Action"):
 		init_interaction()
-	
 	move_and_slide()
 	
 func init_interaction():
@@ -44,3 +43,8 @@ func init_interaction():
 func finish_interaction():
 	is_interacting = false
 	state_machine.travel("Idle")
+
+
+func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
+	print(anim_name)
+	pass # Replace with function body.

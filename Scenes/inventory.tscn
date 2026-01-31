@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dv6p2koik8sw" path="res://Assets/UI/Spritesheets/Spritesheet_UI_Flat.png" id="1_wdn4f"]
 [ext_resource type="Script" uid="uid://cskhm8gvur1s8" path="res://Scripts/HUB/inventory_bar.gd" id="1_yxepq"]
 [ext_resource type="Texture2D" uid="uid://i78q4wecd3n6" path="res://Assets/UI/Spritesheets/Spritesheet_UI_Flat_Animated.png" id="2_k5gp2"]
+[ext_resource type="Texture2D" uid="uid://tn28mxy25fhr" path="res://Assets/Test/HUB/Fruits Asset/01.png" id="3_0n8tc"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0n8tc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5gp2"]
 atlas = ExtResource("1_wdn4f")
@@ -52,7 +55,7 @@ animations = [{
 metadata/_edit_vertical_guides_ = [164.0]
 metadata/_edit_horizontal_guides_ = [231.0]
 
-[node name="InventoryBar" type="Control" parent="." unique_id=781907137]
+[node name="InventoryBar" type="Control" parent="." unique_id=781907137 groups=["Inventario"]]
 layout_mode = 3
 anchor_top = 0.707
 anchor_right = 1.0
@@ -75,6 +78,7 @@ theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 20
 
 [node name="TextureRect" type="TextureRect" parent="InventoryBar/MarginContainer" unique_id=2137430522]
+material = SubResource("CanvasItemMaterial_0n8tc")
 layout_mode = 2
 texture = SubResource("AtlasTexture_k5gp2")
 expand_mode = 3
@@ -89,95 +93,125 @@ layout_mode = 2
 theme_override_constants/separation = 9
 alignment = 1
 
-[node name="Slot" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=182941640]
+[node name="Slot0" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=182941640]
 layout_mode = 2
 texture = SubResource("AtlasTexture_yxepq")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot" unique_id=61734250]
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot0" unique_id=61734250]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 1
+theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 1
+theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="Slot2" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=336465670]
+[node name="TextureRect" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot0/MarginContainer" unique_id=26352613]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_0n8tc")
+expand_mode = 1
+
+[node name="Slot1" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=336465670]
 layout_mode = 2
 texture = SubResource("AtlasTexture_yxepq")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot2" unique_id=847435777]
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot1" unique_id=847435777]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 1
+theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 1
+theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="Slot3" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=88989245]
+[node name="TextureRect" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot1/MarginContainer" unique_id=534266560]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_0n8tc")
+expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=88989245]
 layout_mode = 2
 texture = SubResource("AtlasTexture_yxepq")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot3" unique_id=2109026064]
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot2" unique_id=2109026064]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 1
+theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 1
+theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="Slot4" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=427678953]
+[node name="TextureRect" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot2/MarginContainer" unique_id=776657743]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_0n8tc")
+expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=427678953]
 layout_mode = 2
 texture = SubResource("AtlasTexture_yxepq")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot4" unique_id=1614253150]
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot3" unique_id=1614253150]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 1
+theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 1
+theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="Slot5" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=1035258067]
+[node name="TextureRect" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot3/MarginContainer" unique_id=1777168649]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_0n8tc")
+expand_mode = 1
+
+[node name="Slot4" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=1035258067]
 layout_mode = 2
 texture = SubResource("AtlasTexture_yxepq")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot5" unique_id=1430445669]
+[node name="MarginContainer" type="MarginContainer" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot4" unique_id=1430445669]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 1
+theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 1
 theme_override_constants/margin_bottom = 4
+
+[node name="TextureRect" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer/Slot4/MarginContainer" unique_id=114713361]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_0n8tc")
+expand_mode = 1
 
 [node name="Slot6" type="TextureRect" parent="InventoryBar/MarginContainer/MarginContainer/HBoxContainer" unique_id=735921299]
 visible = false
@@ -259,4 +293,4 @@ theme_override_constants/margin_bottom = 4
 position = Vector2(195.49995, 19.5)
 scale = Vector2(1.1562495, 1.2187502)
 sprite_frames = SubResource("SpriteFrames_trvqw")
-frame_progress = 0.55552423
+frame_progress = 0.78472936

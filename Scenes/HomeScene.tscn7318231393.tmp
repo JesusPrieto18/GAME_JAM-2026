@@ -1,16 +1,10 @@
 [gd_scene format=4 uid="uid://b7pno4jujasmt"]
 
 [ext_resource type="Texture2D" uid="uid://lvf17t5gx3jy" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_5xu7f"]
-[ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/items/Items.gd" id="3_63w74"]
+[ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scenes/Arepa.gd" id="3_63w74"]
 [ext_resource type="Texture2D" uid="uid://biqwyj1n8yv7k" path="res://Assets/Character/Arepa/32x32 Arepa.png" id="3_u74ba"]
 [ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/items/Arepa.tres" id="4_obs24"]
 [ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/jugador.tscn" id="5_63w74"]
-[ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="5_obs24"]
-[ext_resource type="Resource" uid="uid://i5piglu53kf8" path="res://Scripts/items/Agua.tres" id="5_s1txa"]
-[ext_resource type="Resource" uid="uid://btwnikrw5is46" path="res://Scripts/items/Harina.tres" id="7_molqu"]
-[ext_resource type="Texture2D" uid="uid://bl4wyo6qcdwkb" path="res://Assets/Character/Arepa/32x32 Harina_Pan.png" id="8_aoajg"]
-[ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/items/Queso.tres" id="9_08q88"]
-[ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="10_fhhou"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mxma7"]
 texture = ExtResource("1_5xu7f")
@@ -277,7 +271,7 @@ tile_map_data = PackedByteArray("AAAJAAAAAQAHABEAAAAJAAEAAQAHABIAAAAJAAIAAQALAAs
 tile_set = SubResource("TileSet_63w74")
 
 [node name="Arepa" type="Area2D" parent="." unique_id=1384694819]
-position = Vector2(48, 122)
+position = Vector2(37, 61)
 script = ExtResource("3_63w74")
 item_data = ExtResource("4_obs24")
 metadata/_edit_group_ = true
@@ -288,50 +282,7 @@ texture = ExtResource("3_u74ba")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Arepa" unique_id=1797500992]
 shape = SubResource("RectangleShape2D_mxma7")
 
-[node name="Agua" type="Area2D" parent="." unique_id=158658541]
-position = Vector2(13, 64)
-script = ExtResource("3_63w74")
-item_data = ExtResource("5_s1txa")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Agua" unique_id=955197088]
-texture = ExtResource("5_obs24")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Agua" unique_id=845452325]
-shape = SubResource("RectangleShape2D_mxma7")
-
-[node name="Harina" type="Area2D" parent="." unique_id=619794257]
-position = Vector2(64, 40)
-script = ExtResource("3_63w74")
-item_data = ExtResource("7_molqu")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Harina" unique_id=1841037056]
-texture = ExtResource("8_aoajg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Harina" unique_id=1092988245]
-shape = SubResource("RectangleShape2D_mxma7")
-
-[node name="Queso" type="Area2D" parent="." unique_id=1188014983]
-position = Vector2(106, 33)
-script = ExtResource("3_63w74")
-item_data = ExtResource("9_08q88")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Queso" unique_id=12997238]
-texture = ExtResource("10_fhhou")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Queso" unique_id=853329970]
-shape = SubResource("RectangleShape2D_mxma7")
-
 [node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("5_63w74")]
 position = Vector2(-121, -51)
 
 [connection signal="body_entered" from="Arepa" to="Arepa" method="_on_body_entered"]
-[connection signal="body_exited" from="Arepa" to="Arepa" method="_on_body_exited"]
-[connection signal="body_entered" from="Agua" to="Agua" method="_on_body_entered"]
-[connection signal="body_exited" from="Agua" to="Agua" method="_on_body_exited"]
-[connection signal="body_entered" from="Harina" to="Harina" method="_on_body_entered"]
-[connection signal="body_exited" from="Harina" to="Harina" method="_on_body_exited"]
-[connection signal="body_entered" from="Queso" to="Queso" method="_on_body_entered"]
-[connection signal="body_exited" from="Queso" to="Queso" method="_on_body_exited"]

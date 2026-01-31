@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bo4f520qq837e"]
+
+[ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="1_br6u8"]
+[ext_resource type="Script" uid="uid://c5ecaw5fl1kma" path="res://Scripts/items/ItemData.gd" id="2_0dys3"]
+
+[resource]
+script = ExtResource("2_0dys3")
+nombre = "Queso"
+descripcion = "Queso"
+icono = ExtResource("1_br6u8")
+metadata/_custom_type_script = "uid://c5ecaw5fl1kma"

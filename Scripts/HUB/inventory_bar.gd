@@ -9,8 +9,9 @@ var position_container = {
 	3: Vector2(157.5, 19.5),
 	4: Vector2(195.5, 19.5)
 }
-
+#@onready var slot = $MarginContainer/MarginContainer/HBoxContainer/Slot
 @onready var select = $MarginContainer/MarginContainer/AnimatedSprite2D
+@onready var grid = $MarginContainer/MarginContainer/HBoxContainer
 var slot_select = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -24,7 +25,10 @@ func _input(event: InputEvent) -> void:
 		if event.keycode >= KEY_1 and event.keycode <= KEY_5:
 		# Convertimos la tecla 1 (código 49) a índice 0
 			change_slot(event.keycode - KEY_1)
-			
+		if event.keycode == 81:
+			pass
+			#use_object()
+
 func change_slot(nuevo_indice):
 	# Asegurarnos de que el índice no se salga de 0 a 8 (Loop)
 	if nuevo_indice > 5: 
@@ -34,6 +38,24 @@ func change_slot(nuevo_indice):
 		
 	slot_select = nuevo_indice
 	select.position = position_container.get(slot_select)
+
+func add_object(item: ItemData) -> bool:
+	for i in range(container.size()):
+		if container[i] == null:
+			container[i] = item
+			update_slot(i, item)
+			return true
+			
+	return false
+	
+func update_slot(i: int, item: ItemData):
+	var slot = grid.get_child(i)
+	print(slot.get_node("MarginContainer/TextureRect").name)
+	var slot_texture = slot.get_child(0).get_node("TextureRect")
+	#print(slot_texture.texture.resource_path)
+	slot_texture.texture = item.icono
+	slot_texture.visible = true
+	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
