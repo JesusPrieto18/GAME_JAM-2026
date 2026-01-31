@@ -323,7 +323,7 @@ tile_set = SubResource("TileSet_0ayms")
 [node name="CanvasLayer" type="CanvasLayer" parent="TilemapLayers" unique_id=716258628]
 
 [node name="DialogueBox" type="Panel" parent="TilemapLayers/CanvasLayer" unique_id=1457661558]
-offset_left = 2.0
+offset_left = -1.0
 offset_top = 193.0
 offset_right = 482.0
 offset_bottom = 270.0
