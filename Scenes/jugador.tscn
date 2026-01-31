@@ -1,16 +1,7 @@
-[gd_scene format=3 uid="uid://c70uoh5xh43mf"]
+[gd_scene format=3 uid="uid://1aranp0uojqg"]
 
 [ext_resource type="PackedScene" uid="uid://d1dl5krurbud" path="res://Scenes/player.tscn" id="1_5ydob"]
 
-[node name="Jugador" type="Node2D" unique_id=504297168]
+[node name="Jugador" type="Node2D" unique_id=366462625]
 
 [node name="Player" parent="." unique_id=1692963863 instance=ExtResource("1_5ydob")]
-position = Vector2(103, 63)
-<<<<<<< HEAD
-=======
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=291649481]
-visible = false
-position = Vector2(0, -2.3499113e-06)
-zoom = Vector2(0.5, 0.5)
->>>>>>> 970cc8b790473a390e87d5f8ef80b352b4e0e90b
