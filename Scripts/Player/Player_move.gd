@@ -89,7 +89,7 @@ func _on_used_item(name: String):
 			if name == "Capy":
 				modulate.a = 1
 			elif GameManager.last_hability == "Tuqueque":
-				scale = Vector2(1.5,1.5)
+				scale = Vector2(1,1)
 			GameManager.highlight_item_off.emit()
 			GameManager.last_hability = null
 			GameManager.hability_on = false

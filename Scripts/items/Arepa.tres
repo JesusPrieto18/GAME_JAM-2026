@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ddcbxny2fslsb"]
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://i5piglu53kf8"]
 
-[ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="1_o3lfs"]
-[ext_resource type="Script" uid="uid://c5ecaw5fl1kma" path="res://Scripts/Items/ItemData.gd" id="1_sqs6u"]
+[ext_resource type="Texture2D" uid="uid://biqwyj1n8yv7k" path="res://Assets/Character/Arepa/32x32 Arepa.png" id="1_jcatq"]
+[ext_resource type="Script" uid="uid://c5ecaw5fl1kma" path="res://Scripts/Items/ItemData.gd" id="2_argwd"]
 
 [resource]
-script = ExtResource("1_sqs6u")
-nombre = "Agua"
-descripcion = "Agua"
-icono = ExtResource("1_o3lfs")
+script = ExtResource("2_argwd")
+nombre = "Arepa"
+descripcion = "Arepa"
+icono = ExtResource("1_jcatq")
 metadata/_custom_type_script = "uid://c5ecaw5fl1kma"

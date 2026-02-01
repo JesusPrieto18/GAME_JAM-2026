@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://hj3pdevrpffn"]
+[gd_scene format=4 uid="uid://cnsyf4q1tw3oa"]
 
 [ext_resource type="Texture2D" uid="uid://lvf17t5gx3jy" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_gqag4"]
 [ext_resource type="Script" uid="uid://2cdvrb5pd43f" path="res://Scripts/Eventos/home_scene_1.gd" id="1_jgbp7"]
@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Personajes/jugador.tscn" id="17_p262x"]
 [ext_resource type="PackedScene" uid="uid://d0gpado8f66yq" path="res://Scenes/Personajes/mom.tscn" id="18_ecifw"]
 [ext_resource type="Script" uid="uid://bc5532shcx4u8" path="res://Scripts/Dialogues/dialogue_box.gd" id="18_jgbp7"]
-[ext_resource type="Script" uid="uid://c8uu38sy7mhlt" path="res://Scripts/Eventos/path_2d_mama_va_al_tanque.gd" id="19_3yxxs"]
+[ext_resource type="Script" path="res://Scripts/Eventos/path_2d_mama_va_al_tanque.gd" id="19_3yxxs"]
 [ext_resource type="Texture2D" uid="uid://ck0vxpnpo15dv" path="res://Assets/UI/Sprites/UI_Flat_Bar10a.png" id="19_453vy"]
 [ext_resource type="AudioStream" uid="uid://cm5uogsmyn5lg" path="res://Assets/Audio/video-game-speak-358238.mp3" id="20_exdaj"]
 [ext_resource type="Texture2D" uid="uid://cxgvwagevv18f" path="res://Assets/UI/Sprites/UI_Flat_Banner04a.png" id="22_omwcw"]
@@ -32,8 +32,15 @@
 [ext_resource type="Texture2D" uid="uid://cgxf6ar57bkdk" path="res://Assets/UI/Sprites/UI_Flat_IconCross01a.png" id="28_p262x"]
 [ext_resource type="Texture2D" uid="uid://bjifrpxe6bqsg" path="res://Assets/Map/House/TopDownHouse_SmallItems.png" id="29_i8152"]
 [ext_resource type="Texture2D" uid="uid://e1wxf0d4rass" path="res://Assets/Character/Tuqueque/64x64 Tuqueque.png" id="30_p262x"]
-[ext_resource type="Script" uid="uid://bdq51ep7e18w7" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
-[ext_resource type="Script" uid="uid://bdk7sabykb1kc" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
+[ext_resource type="Script" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
+[ext_resource type="Script" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
+[ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/Items/Items.gd" id="35_tftfw"]
+[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/Items/Agua.tres" id="36_dlu56"]
+[ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="37_8o5cb"]
+[ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="38_8o5cb"]
+[ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/Items/Queso.tres" id="38_x3wne"]
+[ext_resource type="Texture2D" uid="uid://bl4wyo6qcdwkb" path="res://Assets/Character/Arepa/32x32 Harina_Pan.png" id="39_wew2n"]
+[ext_resource type="Resource" uid="uid://btwnikrw5is46" path="res://Scripts/Items/Harina.tres" id="40_5a820"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qm63n"]
 texture = ExtResource("1_qm63n")
@@ -8216,6 +8223,9 @@ region = Rect2(65.852844, 446.60007, 6.9299164, 11.549866)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tftfw"]
 size = Vector2(32, 54)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wew2n"]
+size = Vector2(20, 39)
+
 [node name="HomeLevel" type="Node2D" unique_id=806564061]
 position = Vector2(-36, 15)
 script = ExtResource("1_jgbp7")
@@ -8262,6 +8272,7 @@ position = Vector2(-103, 223)
 position = Vector2(-104, 218)
 curve = SubResource("Curve2D_kf6t4")
 script = ExtResource("19_3yxxs")
+metadata/_edit_lock_ = true
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2DMamaVaAlTanque" unique_id=1659817886]
 position = Vector2(1, 5)
@@ -8344,12 +8355,14 @@ theme_override_fonts/normal_font = ExtResource("24_4psfi")
 theme_override_font_sizes/normal_font_size = 16
 
 [node name="EscenaSinInternet" type="Area2D" parent="." unique_id=275683157]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EscenaSinInternet" unique_id=177148420]
 position = Vector2(223, 56)
 shape = SubResource("RectangleShape2D_dh137")
 
 [node name="EscenaTukekePideAyuda" type="Area2D" parent="." unique_id=1434993924]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EscenaTukekePideAyuda" unique_id=1249357]
 position = Vector2(-182, 227)
@@ -8358,6 +8371,7 @@ shape = SubResource("RectangleShape2D_dh137")
 [node name="BtnSound" type="AudioStreamPlayer2D" parent="." unique_id=797406014]
 position = Vector2(484, -4)
 stream = ExtResource("25_4psfi")
+metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1724653559]
 
@@ -8373,13 +8387,16 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_hpexc")
 theme_override_styles/focus = SubResource("StyleBoxTexture_i8152")
 icon = ExtResource("28_p262x")
 icon_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Sarten" type="Sprite2D" parent="." unique_id=387401535]
 position = Vector2(-130, 195)
 texture = SubResource("AtlasTexture_p262x")
+metadata/_edit_lock_ = true
 
 [node name="Area2DTukeke" type="Area2D" parent="." unique_id=108082042]
 script = ExtResource("32_pttn6")
+metadata/_edit_lock_ = true
 
 [node name="Tukeke" type="Sprite2D" parent="Area2DTukeke" unique_id=320508792]
 position = Vector2(-128, 193)
@@ -8394,6 +8411,7 @@ shape = SubResource("RectangleShape2D_kf6t4")
 [node name="AreaLLaveDePaso" type="Area2D" parent="." unique_id=2133155162]
 position = Vector2(-55, -126)
 script = ExtResource("33_pttn6")
+metadata/_edit_lock_ = true
 
 [node name="LlaveDePaso" type="Sprite2D" parent="AreaLLaveDePaso" unique_id=698979390]
 position = Vector2(0, -3)
@@ -8403,9 +8421,60 @@ texture = SubResource("AtlasTexture_gro66")
 position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_tftfw")
 
+[node name="AreaAgua" type="Area2D" parent="." unique_id=534932564]
+position = Vector2(-256, 202)
+collision_layer = 8
+script = ExtResource("35_tftfw")
+item_data = ExtResource("36_dlu56")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreaAgua" unique_id=649001486]
+position = Vector2(3.8146973e-06, -4.999996)
+scale = Vector2(0.26562524, 0.26562524)
+texture = ExtResource("37_8o5cb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAgua" unique_id=1172482091]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_wew2n")
+
+[node name="AreaQueso" type="Area2D" parent="." unique_id=1826189169]
+position = Vector2(-77, 240)
+collision_layer = 8
+script = ExtResource("35_tftfw")
+item_data = ExtResource("38_x3wne")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreaQueso" unique_id=1554699913]
+position = Vector2(3.8146973e-06, -4.999996)
+scale = Vector2(0.26562524, 0.26562524)
+texture = ExtResource("38_8o5cb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaQueso" unique_id=733219728]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_wew2n")
+
+[node name="AreaHarina" type="Area2D" parent="." unique_id=1605494037]
+position = Vector2(-100, 201)
+collision_layer = 8
+script = ExtResource("35_tftfw")
+item_data = ExtResource("40_5a820")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreaHarina" unique_id=1719326501]
+position = Vector2(3.8146973e-06, -4.999996)
+scale = Vector2(0.26562524, 0.26562524)
+texture = ExtResource("39_wew2n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaHarina" unique_id=1259821812]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_wew2n")
+
 [connection signal="body_entered" from="EscenaSinInternet" to="." method="_on_escena_sin_internet_body_entered"]
 [connection signal="body_entered" from="EscenaTukekePideAyuda" to="." method="_on_escena_tukeke_pide_ayuda_body_entered"]
 [connection signal="pressed" from="CanvasLayer/ButtonExit" to="." method="_on_button_exit_pressed"]
 [connection signal="body_entered" from="Area2DTukeke" to="Area2DTukeke" method="_on_body_entered"]
 [connection signal="body_entered" from="AreaLLaveDePaso" to="AreaLLaveDePaso" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaLLaveDePaso" to="AreaLLaveDePaso" method="_on_body_exited"]
+[connection signal="body_entered" from="AreaAgua" to="AreaAgua" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaAgua" to="AreaAgua" method="_on_body_exited"]
+[connection signal="body_entered" from="AreaQueso" to="AreaQueso" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaQueso" to="AreaQueso" method="_on_body_exited"]
+[connection signal="body_entered" from="AreaHarina" to="AreaHarina" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaHarina" to="AreaHarina" method="_on_body_exited"]

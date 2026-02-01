@@ -13,6 +13,7 @@ func _ready():
 		sprite.texture = item_data.icono
 
 func _on_body_entered(body):
+	print(body.name)
 	# Verificamos si quien chocó es el jugador
 	if body.is_in_group("Jugador"):
 		jugador_en_rango = true
