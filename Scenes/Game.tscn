@@ -5,8 +5,8 @@
 
 [node name="Game" type="Node2D" unique_id=806564061]
 
-[node name="Puzzle2" parent="." unique_id=581298973 instance=ExtResource("1_gl6un")]
-position = Vector2(291, 45)
-
 [node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("2_j5yw3")]
 position = Vector2(294, 145)
+
+[node name="Puzzle2" parent="." unique_id=581298973 instance=ExtResource("1_gl6un")]
+position = Vector2(291, 45)

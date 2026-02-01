@@ -325,7 +325,7 @@ texture = ExtResource("10_fhhou")
 shape = SubResource("RectangleShape2D_mxma7")
 
 [node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("5_63w74")]
-position = Vector2(-121, -51)
+position = Vector2(-97, -27)
 
 [connection signal="body_entered" from="Arepa" to="Arepa" method="_on_body_entered"]
 [connection signal="body_exited" from="Arepa" to="Arepa" method="_on_body_exited"]
