@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://lvf17t5gx3jy" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_gqag4"]
 [ext_resource type="Script" uid="uid://2cdvrb5pd43f" path="res://Scripts/Eventos/home_scene_1.gd" id="1_jgbp7"]
 [ext_resource type="Texture2D" uid="uid://djk8jmpoqbs3b" path="res://Assets/Map/Background/black-screen-background-4k.png" id="1_qm63n"]
-[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="2_2sy5y"]
 [ext_resource type="Texture2D" uid="uid://bomb24kk6xmvy" path="res://Assets/Map/House/Yard/Path_Tile.png" id="2_4d4tq"]
 [ext_resource type="Texture2D" uid="uid://2oq2wkfmd6iw" path="res://Assets/Map/House/Interiors_free_16x16.png" id="2_53t7o"]
 [ext_resource type="Texture2D" uid="uid://dokmkd8vjffm5" path="res://Assets/Map/House/Yard/Path_Middle.png" id="3_w3bvg"]
@@ -18,7 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://fph5fiuxhcfk" path="res://Assets/Map/House/Yard/Outdoor_Decor_Free.png" id="12_iluka"]
 [ext_resource type="Texture2D" uid="uid://ddyiugr8p8tpy" path="res://Assets/Map/House/TopDownHouse_FurnitureState2.png" id="14_qm63n"]
 [ext_resource type="Texture2D" uid="uid://5jxjncuswfxq" path="res://Assets/UI/Sprites/UI_Flat_Button01a_1.png" id="17_dh137"]
+[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Personajes/jugador.tscn" id="17_p262x"]
+[ext_resource type="PackedScene" uid="uid://d0gpado8f66yq" path="res://Scenes/Personajes/mom.tscn" id="18_ecifw"]
 [ext_resource type="Script" uid="uid://bc5532shcx4u8" path="res://Scripts/Dialogues/dialogue_box.gd" id="18_jgbp7"]
+[ext_resource type="Script" uid="uid://c8uu38sy7mhlt" path="res://Scripts/Eventos/path_2d_mama_va_al_tanque.gd" id="19_3yxxs"]
 [ext_resource type="Texture2D" uid="uid://ck0vxpnpo15dv" path="res://Assets/UI/Sprites/UI_Flat_Bar10a.png" id="19_453vy"]
 [ext_resource type="AudioStream" uid="uid://cm5uogsmyn5lg" path="res://Assets/Audio/video-game-speak-358238.mp3" id="20_exdaj"]
 [ext_resource type="Texture2D" uid="uid://cxgvwagevv18f" path="res://Assets/UI/Sprites/UI_Flat_Banner04a.png" id="22_omwcw"]
@@ -28,6 +30,10 @@
 [ext_resource type="Texture2D" uid="uid://dapb3p2xk61a3" path="res://Assets/UI/Sprites/UI_Flat_Button02a_3.png" id="26_hpexc"]
 [ext_resource type="Texture2D" uid="uid://cjscjcqsnoorl" path="res://Assets/UI/Sprites/UI_Flat_Button02a_1.png" id="27_i8152"]
 [ext_resource type="Texture2D" uid="uid://cgxf6ar57bkdk" path="res://Assets/UI/Sprites/UI_Flat_IconCross01a.png" id="28_p262x"]
+[ext_resource type="Texture2D" uid="uid://bjifrpxe6bqsg" path="res://Assets/Map/House/TopDownHouse_SmallItems.png" id="29_i8152"]
+[ext_resource type="Texture2D" uid="uid://e1wxf0d4rass" path="res://Assets/Character/Tuqueque/64x64 Tuqueque.png" id="30_p262x"]
+[ext_resource type="Script" uid="uid://bdq51ep7e18w7" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
+[ext_resource type="Script" uid="uid://bdk7sabykb1kc" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qm63n"]
 texture = ExtResource("1_qm63n")
@@ -8123,6 +8129,12 @@ sources/0 = SubResource("TileSetAtlasSource_rx4vx")
 sources/1 = SubResource("TileSetAtlasSource_53t7o")
 sources/2 = SubResource("TileSetAtlasSource_7josi")
 
+[sub_resource type="Curve2D" id="Curve2D_kf6t4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1, 5, 0, 0, 0, 0, -40, 5, 0, 0, 0, 0, -84, 7, 0, 0, 0, 0, -85, -118, 0, 0, 0, 0, -10, -196, 0, 0, 0, 0, -8, -300)
+}
+point_count = 6
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_omwcw"]
 texture = ExtResource("17_dh137")
 texture_margin_left = 1.0
@@ -8190,6 +8202,20 @@ texture = ExtResource("26_hpexc")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i8152"]
 texture = ExtResource("26_hpexc")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_p262x"]
+atlas = ExtResource("29_i8152")
+region = Rect2(112.18507, 82.85077, 16.029747, 13.364044)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kf6t4"]
+size = Vector2(20, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gro66"]
+atlas = ExtResource("2_53t7o")
+region = Rect2(65.852844, 446.60007, 6.9299164, 11.549866)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tftfw"]
+size = Vector2(32, 54)
+
 [node name="HomeLevel" type="Node2D" unique_id=806564061]
 position = Vector2(-36, 15)
 script = ExtResource("1_jgbp7")
@@ -8226,9 +8252,26 @@ tile_map_data = PackedByteArray("AAAOAAMAAAAFAAEAAAANAAIAAAAAAAIAAAAOAAEAAAABAAQ
 tile_set = SubResource("TileSet_qm63n")
 metadata/_edit_lock_ = true
 
-[node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("2_2sy5y")]
-position = Vector2(-108, -100)
-scale = Vector2(1.357527, 1.366385)
+[node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("17_p262x")]
+position = Vector2(-22, -54)
+
+[node name="Mom" parent="." unique_id=1692963863 instance=ExtResource("18_ecifw")]
+position = Vector2(-103, 223)
+
+[node name="Path2DMamaVaAlTanque" type="Path2D" parent="." unique_id=1300942347]
+position = Vector2(-104, 218)
+curve = SubResource("Curve2D_kf6t4")
+script = ExtResource("19_3yxxs")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2DMamaVaAlTanque" unique_id=1659817886]
+position = Vector2(1, 5)
+rotation = 3.1415927
+loop = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2DMamaVaAlTanque/PathFollow2D" unique_id=2079925890]
+remote_path = NodePath("../../../Mom")
+update_rotation = false
+update_scale = false
 
 [node name="CanvasLayerDialogue" type="CanvasLayer" parent="." unique_id=910325108]
 
@@ -8331,6 +8374,38 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_i8152")
 icon = ExtResource("28_p262x")
 icon_alignment = 1
 
+[node name="Sarten" type="Sprite2D" parent="." unique_id=387401535]
+position = Vector2(-130, 195)
+texture = SubResource("AtlasTexture_p262x")
+
+[node name="Area2DTukeke" type="Area2D" parent="." unique_id=108082042]
+script = ExtResource("32_pttn6")
+
+[node name="Tukeke" type="Sprite2D" parent="Area2DTukeke" unique_id=320508792]
+position = Vector2(-128, 193)
+scale = Vector2(0.18750004, 0.15624987)
+texture = ExtResource("30_p262x")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DTukeke" unique_id=242067980]
+position = Vector2(-127, 204.5)
+shape = SubResource("RectangleShape2D_kf6t4")
+
+[node name="AreaLLaveDePaso" type="Area2D" parent="." unique_id=2133155162]
+position = Vector2(-55, -126)
+script = ExtResource("33_pttn6")
+
+[node name="LlaveDePaso" type="Sprite2D" parent="AreaLLaveDePaso" unique_id=698979390]
+position = Vector2(0, -3)
+texture = SubResource("AtlasTexture_gro66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLLaveDePaso" unique_id=1472253109]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_tftfw")
+
 [connection signal="body_entered" from="EscenaSinInternet" to="." method="_on_escena_sin_internet_body_entered"]
 [connection signal="body_entered" from="EscenaTukekePideAyuda" to="." method="_on_escena_tukeke_pide_ayuda_body_entered"]
 [connection signal="pressed" from="CanvasLayer/ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="body_entered" from="Area2DTukeke" to="Area2DTukeke" method="_on_body_entered"]
+[connection signal="body_entered" from="AreaLLaveDePaso" to="AreaLLaveDePaso" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaLLaveDePaso" to="AreaLLaveDePaso" method="_on_body_exited"]

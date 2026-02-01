@@ -2,12 +2,12 @@ extends Node
 
 ################ FUNCIONES INICIALES ###################
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+#func _ready() -> void:
+	#pass # Replace with function body.
+#
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+	#pass
 
 #########################################################
 
@@ -39,7 +39,9 @@ var tuqueque_free = false
 var puzzle1 = {
 				"Init": false,
 				"resolved": false,
-				"help_dialog": "Distrae a tu mamá para salvar al tuqueque"
+				"llaveCerrada": false,
+				"mamaEnElbaño": false,
+				"help_dialog": "Distrae a tu mamá para salvar al tuqueque en el sarten"
 }
 
 # Puzzle2: Arepa
@@ -133,5 +135,14 @@ var dialogues = {
 			}
 		
 	],
+	
+	2: [
+		{"name": "Tuqueque", "text": ["DIOS MIO!!! MI SALVADOR!!!"]},
+		{"name": name_player, "text": ["Habla claro tuqueque",
+													"Me dijiste que me ibas a dar algo si te salvaba"]},
+		{"name": "Tuqueque", "text": [  "Claro claro",
+										"Es que mira, por si no te diste cuenta",
+										"SOY UN TUQUEQUE MÁGICO!!!"]},
+	]
 	
 }

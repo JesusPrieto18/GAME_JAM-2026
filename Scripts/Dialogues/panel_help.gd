@@ -5,9 +5,9 @@ extends Panel
 func _ready() -> void:
 	self.hide() 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+	#pass
 
 #####################################################################
 
