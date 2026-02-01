@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cnsyf4q1tw3oa"]
+[gd_scene format=4 uid="uid://hj3pdevrpffn"]
 
 [ext_resource type="Texture2D" uid="uid://lvf17t5gx3jy" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_gqag4"]
 [ext_resource type="Script" uid="uid://2cdvrb5pd43f" path="res://Scripts/Eventos/home_scene_1.gd" id="1_jgbp7"]
@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Personajes/jugador.tscn" id="17_p262x"]
 [ext_resource type="PackedScene" uid="uid://d0gpado8f66yq" path="res://Scenes/Personajes/mom.tscn" id="18_ecifw"]
 [ext_resource type="Script" uid="uid://bc5532shcx4u8" path="res://Scripts/Dialogues/dialogue_box.gd" id="18_jgbp7"]
-[ext_resource type="Script" path="res://Scripts/Eventos/path_2d_mama_va_al_tanque.gd" id="19_3yxxs"]
+[ext_resource type="Script" uid="uid://c8uu38sy7mhlt" path="res://Scripts/Eventos/path_2d_mama_va_al_tanque.gd" id="19_3yxxs"]
 [ext_resource type="Texture2D" uid="uid://ck0vxpnpo15dv" path="res://Assets/UI/Sprites/UI_Flat_Bar10a.png" id="19_453vy"]
 [ext_resource type="AudioStream" uid="uid://cm5uogsmyn5lg" path="res://Assets/Audio/video-game-speak-358238.mp3" id="20_exdaj"]
 [ext_resource type="Texture2D" uid="uid://cxgvwagevv18f" path="res://Assets/UI/Sprites/UI_Flat_Banner04a.png" id="22_omwcw"]
@@ -32,15 +32,15 @@
 [ext_resource type="Texture2D" uid="uid://cgxf6ar57bkdk" path="res://Assets/UI/Sprites/UI_Flat_IconCross01a.png" id="28_p262x"]
 [ext_resource type="Texture2D" uid="uid://bjifrpxe6bqsg" path="res://Assets/Map/House/TopDownHouse_SmallItems.png" id="29_i8152"]
 [ext_resource type="Texture2D" uid="uid://e1wxf0d4rass" path="res://Assets/Character/Tuqueque/64x64 Tuqueque.png" id="30_p262x"]
-[ext_resource type="Script" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
-[ext_resource type="Script" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
-[ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/Items/Items.gd" id="35_tftfw"]
-[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/Items/Agua.tres" id="36_dlu56"]
+[ext_resource type="Script" uid="uid://bdq51ep7e18w7" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
+[ext_resource type="Script" uid="uid://bdk7sabykb1kc" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
+[ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/items/Items.gd" id="35_tftfw"]
+[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/items/Arepa.tres" id="36_dlu56"]
 [ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="37_8o5cb"]
 [ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="38_8o5cb"]
-[ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/Items/Queso.tres" id="38_x3wne"]
+[ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/items/Queso.tres" id="38_x3wne"]
 [ext_resource type="Texture2D" uid="uid://bl4wyo6qcdwkb" path="res://Assets/Character/Arepa/32x32 Harina_Pan.png" id="39_wew2n"]
-[ext_resource type="Resource" uid="uid://btwnikrw5is46" path="res://Scripts/Items/Harina.tres" id="40_5a820"]
+[ext_resource type="Resource" uid="uid://btwnikrw5is46" path="res://Scripts/items/Harina.tres" id="40_5a820"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qm63n"]
 texture = ExtResource("1_qm63n")
@@ -8308,6 +8308,8 @@ offset_left = 11.0
 offset_top = 3.0
 offset_right = 51.0
 offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("24_4psfi")
+theme_override_font_sizes/font_size = 23
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayerDialogue/DialogueBox" unique_id=1834918582]
 layout_mode = 0
@@ -8316,6 +8318,8 @@ offset_top = 30.0
 offset_right = 468.0
 offset_bottom = 68.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("24_4psfi")
+theme_override_font_sizes/normal_font_size = 22
 
 [node name="Timer" type="Timer" parent="CanvasLayerDialogue/DialogueBox" unique_id=1887732120]
 
@@ -8326,6 +8330,7 @@ offset_top = 49.0
 offset_right = 480.0
 offset_bottom = 72.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("24_4psfi")
 text = "[ENTER]"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayerDialogue/DialogueBox" unique_id=1646238019]
