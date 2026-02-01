@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bmb5rm43tfqmn" path="res://Assets/Map/Dungeon1/walls.png" id="2_7dmh8"]
 [ext_resource type="Texture2D" uid="uid://cprbh0vwq07yj" path="res://Assets/Map/Dungeon1/wall-transition-tiles-32x32.png" id="3_hhjjp"]
 [ext_resource type="Texture2D" uid="uid://15n1p25143an" path="res://Assets/Map/Dungeon1/tiles-all-32x32.png" id="4_ov1xy"]
-[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Personajes/jugador.tscn" id="5_7dmh8"]
 [ext_resource type="Texture2D" uid="uid://b0inhrjypcml6" path="res://Assets/Map/Dungeon1/decorative.png" id="6_ov1xy"]
 [ext_resource type="Texture2D" uid="uid://cq0spvgqb6kb2" path="res://Assets/Map/Dungeon1/mainlevbuild.png" id="7_02vhu"]
 [ext_resource type="Texture2D" uid="uid://bt2xkba2xikpm" path="res://Assets/Character/Rata/32x32 Rata_policia.png" id="9_v4jpo"]
@@ -9129,9 +9128,6 @@ texture = ExtResource("9_v4jpo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DRat" unique_id=939046798]
 position = Vector2(146, 52.75)
 shape = SubResource("RectangleShape2D_v4jpo")
-
-[node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("5_7dmh8")]
-position = Vector2(-144, 175)
 
 [node name="Roof" type="TileMapLayer" parent="." unique_id=1092634666]
 tile_map_data = PackedByteArray("AAAJAAEAAAAFAAsAAAAKAAEAAAAGAAsAAAAJAAAAAAADAAUAAAAKAAAAAAADAAUAAAAJAP3/AAAAAAYAAAAJAP7/AAAAAAcAAAAJAP//AAAAAAgAAAAKAP3/AAAFAAcAAAAKAP7/AAAFAAgAAAAKAP//AAADAAgAAAAJAPv/AAAAAAYAAAAJAPz/AAAAAAUAAAAKAPz/AAAFAAYAAAAJAPr/AAAEAAoAAAAKAPr/AAAFAAoAAAALAPr/AAAGAAoAAAAMAPr/AAAHAAoAAAANAPr/AAAFAAoAAAAOAPr/AAABAA8AAAAPAPr/AAABAA0AAAAMAPv/AAABAAkAAAANAPv/AAACAAkAAAAOAPv/AAADAAkAAAAPAPv/AAACAA0AAAAKAPv/AAABAAgAAAALAPv/AAACAAkAAAAQAPr/AAABAA8AAAAQAPv/AAADAAkAAAARAPr/AAABAA0AAAARAPv/AAACAA0AAAAPAPn/AAAEAAwAAAASAPn/AAAHAAwAAAASAPr/AAABAA0AAAASAPv/AAADAA4AAAAOAPn/AAAAAAUAAAATAPn/AAAFAAUAAAATAPr/AAACAA4AAAATAPv/AAACAA0AAAAPAPj/AAAEAA0AAAASAPj/AAAEAA0AABAOAPj/AAAAAAQAAAATAPj/AAAFAAQAAAA=")
