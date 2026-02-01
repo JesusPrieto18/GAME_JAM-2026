@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://1aranp0uojqg"]
 
-[ext_resource type="PackedScene" uid="uid://d1dl5krurbud" path="res://Scenes/Jugador/player.tscn" id="1_5ydob"]
+[ext_resource type="PackedScene" uid="uid://d1dl5krurbud" path="res://Scenes/Personajes/player.tscn" id="1_5ydob"]
 [ext_resource type="Script" uid="uid://12abpc21llle" path="res://Scripts/Player/jugador.gd" id="1_tn1hq"]
-[ext_resource type="PackedScene" uid="uid://dl3vqjv67hli7" path="res://Scenes/Jugador/inventory.tscn" id="2_c1mnh"]
+[ext_resource type="PackedScene" uid="uid://dl3vqjv67hli7" path="res://Scenes/Personajes/inventory.tscn" id="2_c1mnh"]
 
 [node name="Jugador" type="Node2D" unique_id=366462625]
 script = ExtResource("1_tn1hq")
 
-[node name="Player" parent="." unique_id=1692963863 groups=["Jugador"] instance=ExtResource("1_5ydob")]
+[node name="Player" parent="." unique_id=1692963863 instance=ExtResource("1_5ydob")]
 position = Vector2(241, 115)
 
 [node name="HUD" parent="." unique_id=2055821665 instance=ExtResource("2_c1mnh")]

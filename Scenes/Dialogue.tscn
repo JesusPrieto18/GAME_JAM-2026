@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bc5532shcx4u8" path="res://Scripts/Dialogues/dialogue_box.gd" id="4_gwd6a"]
 [ext_resource type="Texture2D" uid="uid://ck0vxpnpo15dv" path="res://Assets/UI/Sprites/UI_Flat_Bar10a.png" id="5_w3qdv"]
 [ext_resource type="AudioStream" uid="uid://cm5uogsmyn5lg" path="res://Assets/Audio/video-game-speak-358238.mp3" id="6_w3mqp"]
-[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="7_7dcj7"]
+[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Personajes/jugador.tscn" id="7_7dcj7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0qem"]
 texture = ExtResource("2_6v1lj")

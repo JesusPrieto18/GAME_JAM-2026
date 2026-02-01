@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bt41xyb7k85vb"]
 
 [ext_resource type="PackedScene" uid="uid://duoiydt1k3nb7" path="res://Scenes/MangoTree/puzzle_2.tscn" id="1_gl6un"]
-[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="2_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Personajes/jugador.tscn" id="2_j5yw3"]
 
 [node name="Game" type="Node2D" unique_id=806564061]
 
