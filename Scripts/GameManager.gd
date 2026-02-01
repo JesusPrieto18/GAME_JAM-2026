@@ -33,6 +33,10 @@ var escena_1_tukeke_pide_ayuda_lista = false
 var escena_2_salvaste_al_tukeke = false
 var pc_sin_internet = true
 var tuqueque_free = false
+var tuqueque_aun_no_ta_la_mascara = true
+
+### CARTEL DE AYUDA ###
+signal actualizar_ayuda(nuevo_texto: String)
 
 ### LOGICA DE PUZZLES ########
 
@@ -80,7 +84,7 @@ var dialogues = {
 					"Aja, como era la vaina para vender esto...  ",
 					"Por qué el internet anda tan lento?",
 					"NOOOOOOOOOOOOOOOOOOOOOOOOO",
-					"Cant'tv se volvio a ir...",
+					"Cant'tv se volvió a ir...",
 					"TT_TT"
 					
 				]
@@ -123,7 +127,7 @@ var dialogues = {
 				"text": [
 					"NO SOY UN MORROCOY SEÑORA POR EL AMOR AL SANTO", 
 					"EH!! TÚ!! CARAJITO!! AYUDAMEEEEE",
-					"TE PROMETO QUE TE COMPENSARE!!"
+					"TE PROMETO QUE TE COMPENSARÉ!!"
 				]	
 			},
 			
@@ -143,7 +147,30 @@ var dialogues = {
 													"Me dijiste que me ibas a dar algo si te salvaba"]},
 		{"name": "Tuqueque", "text": [  "Claro claro",
 										"Es que mira, por si no te diste cuenta",
-										"SOY UN TUQUEQUE MÁGICO!!!"]},
+										"SOY UN TUQUEQUE MÁGICO!!!",
+										"Te puedo conceder un deseo"]},
+		{"name": name_player, "text": ["Claro... Entonces puedes hacer que el internet vuelva?"]},
+		{"name": "Tuqueque", "text": [ "De bolas, claro muchacho",
+										"peroooooo.......",
+										"necesito ayuda con alguito más antes de darte el deseo",]},
+		{"name": name_player, "text": ["Suena a que eres un estafador Tuqueque"]},
+		{"name": "Tuqueque", "text": ["tch! Los niños de hoy en día si que son maleducados",
+									   "Aja niño, mira",
+									 	"Necesito que me busques mis máscaras mágicas",
+										"Son tres: TuquequeMask, MangoMask y ChiguireMask",
+										"Yo tengo la del TuquequeMask, te la voy a dar",
+										"<---TUQUEQUE TE DIO TUQUEQUE_MASK--->",
+										"A ver si te ayuda para buscar las que faltan",
+										"Pero no te la vayas a chorear, mosca",
+										"Con esa máscara puedes volverte de mi tamaño",
+										"Así puedes pasar por lugares pequeñitos",
+										"En cuanto a las demás máscaras...",
+										"La última vez que vi la MangoMask",
+										"Estaba en un árbol del patio",
+										"Y pues nada, echale bola chamo"]},
+		{"name": name_player, "text": ["Si va mano! con tal de que vuelva el internet"]},
+		
+		
 	]
 	
 }

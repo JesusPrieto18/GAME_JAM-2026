@@ -15,8 +15,8 @@ var jugador_cerca = false
 func _input(event):
 	if event.is_action_pressed("Action") and jugador_cerca:
 		# Verificamos ambas condiciones usando 'and'
-		if GameManager.puzzle1["llaveCerrada"] and GameManager.puzzle1["mamaEnElBaño"]:
-			GameManager.tuqueque_free = true
+		if !GameManager.tuqueque_free and GameManager.puzzle1["llaveCerrada"] and GameManager.puzzle1["mamaEnElBaño"]:
+			GameManager.puzzle1['resolved'] = true
 			var sprite_a_borrar = get_tree().current_scene.find_child("Sarten", true, false)
 	
 			if sprite_a_borrar:
@@ -24,14 +24,22 @@ func _input(event):
 			if !GameManager.escena_2_salvaste_al_tukeke:
 				GameManager.escena_2_salvaste_al_tukeke = true
 				iniciar_dialogo_tuqueque()
+				
+
+				
 		else:
 			# Mensaje opcional si el jugador intenta hablarle antes de tiempo
 			print("El Tuqueque parece estar durmiendo...")
 
 func iniciar_dialogo_tuqueque():
-	var caja = get_tree().root.find_child("DialogueBox", true, false)
-	if caja:
-		caja.start_scene_dialogues(2) # O el índice que corresponda al tuqueque
+	var caja_dialogo = get_tree().root.find_child("DialogueBox", true, false)
+	if caja_dialogo:
+		caja_dialogo.start_scene_dialogues(2) 
+		await caja_dialogo.end_scene_signal
+		GameManager.actualizar_ayuda.emit("Encuentra la forma de salir y encontrar los mascaras")
+		GameManager.tuqueque_free = true
+		GameManager.tuqueque_aun_no_ta_la_mascara = false
+
 
 
 func _on_body_entered(body: Node2D) -> void:

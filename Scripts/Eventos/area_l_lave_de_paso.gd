@@ -29,7 +29,7 @@ func _input(event):
 func cerrarLlave():
 	# Cambiamos la variable en el GameManager (Global)
 	GameManager.puzzle1.llaveCerrada = true
-	GameManager.puzzle1.help_dialog = "Ve a hablar con el tuqueque!"
+	GameManager.actualizar_ayuda.emit("La mamá se distrajo. Habla con el Tuqueque!")
 	
 	print("El niñe logró cerra la llave!!!")
 	emit_signal("llave_cerrada")
