@@ -17,3 +17,6 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		if name == "TeleportHouse" and GameManager.last_hability == "Tuqueque" and GameManager.hability_on:
 			body.global_position = teleport.global_position
+		
+		if name == "Teleport":
+			body.global_position = teleport.global_position
