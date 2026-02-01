@@ -38,6 +38,7 @@ func iniciar_dialogo_tuqueque():
 		await caja_dialogo.end_scene_signal
 		GameManager.actualizar_ayuda.emit("Encuentra la forma de salir y encontrar los mascaras")
 		GameManager.tuqueque_free = true
+		GameManager.tuqueque_aun_no_ta_la_mascara = false
 
 
 
