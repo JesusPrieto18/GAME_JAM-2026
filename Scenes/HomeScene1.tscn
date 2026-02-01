@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://hj3pdevrpffn"]
+[gd_scene format=4 uid="uid://cnsyf4q1tw3oa"]
 
 [ext_resource type="Texture2D" uid="uid://dqbun1tcg24p2" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_gqag4"]
 [ext_resource type="Script" uid="uid://2cdvrb5pd43f" path="res://Scripts/Eventos/home_scene_1.gd" id="1_jgbp7"]
@@ -35,11 +35,7 @@
 [ext_resource type="Script" uid="uid://bdq51ep7e18w7" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
 [ext_resource type="Script" uid="uid://bdk7sabykb1kc" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
 [ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/items/Items.gd" id="35_tftfw"]
-<<<<<<< HEAD
-[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/items/Arepa.tres" id="36_dlu56"]
-=======
 [ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/items/Agua.tres" id="36_dlu56"]
->>>>>>> 02f132655693726353c26dcebc8f9bc2d536f5e7
 [ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="37_8o5cb"]
 [ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="38_8o5cb"]
 [ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/items/Queso.tres" id="38_x3wne"]
@@ -8312,8 +8308,6 @@ offset_left = 11.0
 offset_top = 3.0
 offset_right = 51.0
 offset_bottom = 26.0
-theme_override_fonts/font = ExtResource("24_4psfi")
-theme_override_font_sizes/font_size = 23
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayerDialogue/DialogueBox" unique_id=1834918582]
 layout_mode = 0
@@ -8322,8 +8316,6 @@ offset_top = 30.0
 offset_right = 468.0
 offset_bottom = 68.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("24_4psfi")
-theme_override_font_sizes/normal_font_size = 22
 
 [node name="Timer" type="Timer" parent="CanvasLayerDialogue/DialogueBox" unique_id=1887732120]
 
@@ -8334,7 +8326,6 @@ offset_top = 49.0
 offset_right = 480.0
 offset_bottom = 72.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("24_4psfi")
 text = "[ENTER]"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayerDialogue/DialogueBox" unique_id=1646238019]
