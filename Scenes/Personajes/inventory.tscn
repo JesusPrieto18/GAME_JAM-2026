@@ -2,8 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://dv6p2koik8sw" path="res://Assets/UI/Spritesheets/Spritesheet_UI_Flat.png" id="1_wdn4f"]
 [ext_resource type="Script" uid="uid://cskhm8gvur1s8" path="res://Scripts/HUB/inventory_bar.gd" id="1_yxepq"]
+[ext_resource type="Script" uid="uid://c5ecaw5fl1kma" path="res://Scripts/Items/ItemData.gd" id="2_dogae"]
 [ext_resource type="Texture2D" uid="uid://i78q4wecd3n6" path="res://Assets/UI/Spritesheets/Spritesheet_UI_Flat_Animated.png" id="2_k5gp2"]
 [ext_resource type="Texture2D" uid="uid://tn28mxy25fhr" path="res://Assets/Test/HUB/Fruits Asset/01.png" id="3_0n8tc"]
+[ext_resource type="Resource" uid="uid://crb4c3r0isvoy" path="res://Scripts/Items/TUKEKE.tres" id="3_iwsy4"]
+[ext_resource type="Resource" uid="uid://c8bdbc2di88jr" path="res://Scripts/Items/MANGO.tres" id="4_rek4b"]
 [ext_resource type="Script" uid="uid://dnl5peld688qo" path="res://Scripts/HUB/Highlight.gd" id="8_amlgn"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0n8tc"]
@@ -65,6 +68,7 @@ offset_top = 0.11000061
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_yxepq")
+container_test = Array[ExtResource("2_dogae")]([ExtResource("3_iwsy4"), ExtResource("4_rek4b")])
 
 [node name="MarginContainer" type="MarginContainer" parent="InventoryBar" unique_id=2062409476]
 layout_mode = 1

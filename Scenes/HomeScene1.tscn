@@ -35,7 +35,7 @@
 [ext_resource type="Script" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
 [ext_resource type="Script" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
 [ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/Items/Items.gd" id="35_tftfw"]
-[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/Items/Agua.tres" id="36_dlu56"]
+[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/Items/Agua.tres" id="36_x3wne"]
 [ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="37_8o5cb"]
 [ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="38_8o5cb"]
 [ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/Items/Queso.tres" id="38_x3wne"]
@@ -8425,7 +8425,7 @@ shape = SubResource("RectangleShape2D_tftfw")
 position = Vector2(-256, 202)
 collision_layer = 8
 script = ExtResource("35_tftfw")
-item_data = ExtResource("36_dlu56")
+item_data = ExtResource("36_x3wne")
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaAgua" unique_id=649001486]
 position = Vector2(3.8146973e-06, -4.999996)

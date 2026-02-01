@@ -10,12 +10,15 @@ const JUMP_VELOCITY = -400.0
 var is_interacting = false 
 
 @onready var sprite =  $Sprite
+@onready var sprite2 =  $Sprite2
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 
 func _ready() -> void:
 	GameManager.used_item.connect(_on_used_item)
 	sprite.texture = vinotinto
+	sprite.visible = true
+	sprite2.visible = false
 	animation_tree.active = true
 	
 func _physics_process(delta: float) -> void:
@@ -68,10 +71,15 @@ func finish_interaction():
 func change_skin(activar:String):
 	if activar == "Tuqueque":
 		sprite.texture = lagarto
+		sprite.visible = true
+		sprite2.visible = false
 	elif activar == "Mango":
-		sprite.texture = mango
+		sprite.visible = false
+		sprite2.visible = true
 	else:
 		sprite.texture = vinotinto
+		sprite.visible = true
+		sprite2.visible = false
 		
 func _on_used_item(name: String):
 	if not GameManager.hability_on:
@@ -93,7 +101,7 @@ func _on_used_item(name: String):
 			GameManager.highlight_item_off.emit()
 			GameManager.last_hability = null
 			GameManager.hability_on = false
-		change_skin("vinotinto")
+			change_skin("vinotinto")
 
 
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
