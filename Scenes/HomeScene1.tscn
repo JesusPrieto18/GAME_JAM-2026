@@ -8467,13 +8467,6 @@ texture = ExtResource("39_wew2n")
 position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_wew2n")
 
-[node name="Tazon" type="Sprite2D" parent="." unique_id=44769402]
-position = Vector2(-245, 302)
-scale = Vector2(1.0494797, 1.0494796)
-texture = ExtResource("29_i8152")
-region_enabled = true
-region_rect = Rect2(49, 38, 14, 12)
-
 [node name="AreaCocinar" type="Area2D" parent="." unique_id=1353605752]
 position = Vector2(-245, 296)
 collision_layer = 8
@@ -8481,7 +8474,6 @@ script = ExtResource("35_tftfw")
 item_data = ExtResource("42_5a820")
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaCocinar" unique_id=715709955]
-visible = false
 position = Vector2(-1.4781952e-05, 6.0000052)
 scale = Vector2(1.0494797, 1.0494796)
 texture = ExtResource("29_i8152")
