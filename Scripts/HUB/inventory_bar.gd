@@ -1,6 +1,7 @@
 extends Control
 
 @export var container_test: Array[ItemData]
+signal item_select()
 
 var position_container = {
 	0: Vector2(43.5, 19.5),
@@ -63,7 +64,7 @@ func update_slot(i: int, item: ItemData):
 func used_slot():
 	var slot = grid.get_child(slot_select)
 	GameManager.used_item.emit(slot.name)
-	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

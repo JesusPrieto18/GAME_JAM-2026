@@ -46,7 +46,8 @@ func collision_rock():
 		
 		if object_colide is RigidBody2D:
 			var force = 100
-			object_colide.apply_central_impulse(-collision.get_normal() * force)
+			if GameManager.last_hability == "Mango" and GameManager.hability_on:
+				object_colide.apply_central_impulse(-collision.get_normal() * force)
 			velocity = velocity * 0.5
 			
 func init_interaction():
@@ -58,20 +59,26 @@ func finish_interaction():
 	state_machine.travel("Idle")
 
 
-func _on_used_item(name:String):
+func _on_used_item(name: String):
 	if not GameManager.hability_on:
 		if name == "Capy":
 			modulate.a = 0.5
 		elif name == "Tuqueque":
 			scale = Vector2(0.5,0.5)
+		GameManager.last_hability = name
 		GameManager.hability_on = true
+		GameManager.highlight_item_on.emit()
 	else:
-		if name == "Capy":
-			modulate.a = 1
-		elif name == "Tuqueque":
-			scale = Vector2(1.5,1.5)
-			
-		GameManager.hability_on = false
+		if GameManager.last_hability == name:
+			if name == "Capy":
+				modulate.a = 1
+			elif GameManager.last_hability == "Tuqueque":
+				scale = Vector2(1.5,1.5)
+			GameManager.highlight_item_off.emit()
+			GameManager.last_hability = null
+			GameManager.hability_on = false
+
+
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	print(anim_name)
 	pass # Replace with function body.
