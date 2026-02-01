@@ -1,7 +1,7 @@
-[gd_scene format=4 uid="uid://c3qocsuv8u6je"]
+[gd_scene format=4 uid="uid://dghsu4n4m5rtp"]
 
 [ext_resource type="Texture2D" uid="uid://djk8jmpoqbs3b" path="res://Assets/Map/Background/black-screen-background-4k.png" id="1_0eycu"]
-[ext_resource type="Texture2D" uid="uid://dqbun1tcg24p2" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_5xu7f"]
+[ext_resource type="Texture2D" uid="uid://lvf17t5gx3jy" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_5xu7f"]
 [ext_resource type="Texture2D" uid="uid://bomb24kk6xmvy" path="res://Assets/Map/House/Yard/Path_Tile.png" id="3_ix7gp"]
 [ext_resource type="Texture2D" uid="uid://dokmkd8vjffm5" path="res://Assets/Map/House/Yard/Path_Middle.png" id="4_pu2mr"]
 [ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="5_63w74"]
@@ -9,14 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://nj744dr8ns7k" path="res://Assets/Map/House/Yard/Grass_Middle.png" id="6_2r4un"]
 [ext_resource type="Texture2D" uid="uid://dfdtixo361ecg" path="res://Assets/Map/House/Yard/Fences.png" id="7_nhyal"]
 [ext_resource type="Texture2D" uid="uid://bxihk04kdo7dc" path="res://Assets/Map/House/Tileset_16x16_16.png" id="8_ya3fe"]
-[ext_resource type="Texture2D" uid="uid://ci787j01tsli6" path="res://Assets/Map/House/Interiors_free_16x16.png" id="9_4burj"]
-[ext_resource type="Texture2D" uid="uid://db3r04bd1wl7b" path="res://Assets/Map/House/interior free.png" id="10_kbke5"]
-[ext_resource type="Texture2D" uid="uid://b0avm03484kej" path="res://Assets/Map/House/tileset.png" id="11_jk6au"]
+[ext_resource type="Texture2D" uid="uid://2oq2wkfmd6iw" path="res://Assets/Map/House/Interiors_free_16x16.png" id="9_4burj"]
+[ext_resource type="Texture2D" uid="uid://c3nvk7ucowxdm" path="res://Assets/Map/House/interior free.png" id="10_kbke5"]
+[ext_resource type="Texture2D" uid="uid://bglxeo7ypehch" path="res://Assets/Map/House/tileset.png" id="11_jk6au"]
 [ext_resource type="Texture2D" uid="uid://b80sjx672tw4n" path="res://Assets/Map/House/64x64 Cama2.png" id="12_4ls6p"]
 [ext_resource type="Texture2D" uid="uid://q2n1g6adgp8u" path="res://Assets/Map/House/Yard/Oak_Tree.png" id="13_8gk1r"]
 [ext_resource type="Texture2D" uid="uid://fph5fiuxhcfk" path="res://Assets/Map/House/Yard/Outdoor_Decor_Free.png" id="14_idd0d"]
-[ext_resource type="Texture2D" uid="uid://ce5iukxrw5fdm" path="res://Assets/Map/House/TopDownHouse_FurnitureState2.png" id="15_n8mgm"]
-[ext_resource type="Texture2D" uid="uid://dbwn4jhd2ccri" path="res://Assets/Map/House/TopDownHouse_SmallItems.png" id="16_vnvko"]
+[ext_resource type="Texture2D" uid="uid://ddyiugr8p8tpy" path="res://Assets/Map/House/TopDownHouse_FurnitureState2.png" id="15_n8mgm"]
+[ext_resource type="Texture2D" uid="uid://bjifrpxe6bqsg" path="res://Assets/Map/House/TopDownHouse_SmallItems.png" id="16_vnvko"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qm63n"]
 texture = ExtResource("1_0eycu")
@@ -4749,7 +4749,7 @@ texture = ExtResource("8_ya3fe")
 8:13/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gqag4"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_qicg7")
 sources/1 = SubResource("TileSetAtlasSource_dh137")
 sources/2 = SubResource("TileSetAtlasSource_jgbp7")
@@ -6736,7 +6736,7 @@ texture = ExtResource("16_vnvko")
 7:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_w3bvg"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_4ucap")
 sources/2 = SubResource("TileSetAtlasSource_a6w03")
 sources/3 = SubResource("TileSetAtlasSource_4d4tq")
@@ -8247,7 +8247,7 @@ texture = ExtResource("16_vnvko")
 7:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qm63n"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_rx4vx")
 sources/1 = SubResource("TileSetAtlasSource_53t7o")
 sources/2 = SubResource("TileSetAtlasSource_7josi")
@@ -8283,18 +8283,5 @@ tile_map_data = PackedByteArray("AAAOAAMAAAAFAAEAAAANAAIAAAAAAAIAAAAOAAEAAAABAAQ
 tile_set = SubResource("TileSet_qm63n")
 
 [node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("5_63w74")]
-<<<<<<< HEAD
 position = Vector2(-69, -98)
 scale = Vector2(1.357527, 1.366385)
-=======
-position = Vector2(-97, -27)
-
-[connection signal="body_entered" from="Arepa" to="Arepa" method="_on_body_entered"]
-[connection signal="body_exited" from="Arepa" to="Arepa" method="_on_body_exited"]
-[connection signal="body_entered" from="Agua" to="Agua" method="_on_body_entered"]
-[connection signal="body_exited" from="Agua" to="Agua" method="_on_body_exited"]
-[connection signal="body_entered" from="Harina" to="Harina" method="_on_body_entered"]
-[connection signal="body_exited" from="Harina" to="Harina" method="_on_body_exited"]
-[connection signal="body_entered" from="Queso" to="Queso" method="_on_body_entered"]
-[connection signal="body_exited" from="Queso" to="Queso" method="_on_body_exited"]
->>>>>>> f9a417b31b3e678ed9f55b4729535a7b828ac28d
