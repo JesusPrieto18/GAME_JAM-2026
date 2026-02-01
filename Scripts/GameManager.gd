@@ -18,13 +18,21 @@ var name_player = "El niñe"
 
 var container = [null, null, null, null, null]
 
-signal used_item(name)
+signal used_item(name: String)
 signal highlight_item_on()
 signal highlight_item_off()
+signal give_object()
 
 ### SWICTH DE HABILIDAD ###
 var hability_on = false
 var last_hability = null
+
+### ITEM PARA AREPA ###
+
+var harina = false
+var agua = false
+var queso = false
+var arepa = false
 
 ### LOGICA DE LA HISTORIA ####
 

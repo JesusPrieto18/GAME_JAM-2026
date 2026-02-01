@@ -11,6 +11,8 @@ func _process(delta: float) -> void:
 
 func recoger_item(item_data):
 	print("recogiendo")
+	if item_data.nombre == "Pote":
+		return false
 	var se_pudo_guardar = get_tree().get_first_node_in_group("Inventario")
 	print(se_pudo_guardar.name)
 	if se_pudo_guardar:

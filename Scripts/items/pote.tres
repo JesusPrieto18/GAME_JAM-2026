@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b5y1bg81ryhpa"]
+
+[ext_resource type="Texture2D" uid="uid://bjifrpxe6bqsg" path="res://Assets/Map/House/TopDownHouse_SmallItems.png" id="1_aqh2i"]
+[ext_resource type="Script" uid="uid://c5ecaw5fl1kma" path="res://Scripts/Items/ItemData.gd" id="1_mrrdw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqh2i"]
+atlas = ExtResource("1_aqh2i")
+region = Rect2(51, 40, 10, 7)
+
+[resource]
+script = ExtResource("1_mrrdw")
+nombre = "Pote"
+descripcion = "Pote para hacer arepa"
+icono = SubResource("AtlasTexture_aqh2i")
+metadata/_custom_type_script = "uid://c5ecaw5fl1kma"

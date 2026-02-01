@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ykluflo0vae3"]
+
+[ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="1_5siun"]
+[ext_resource type="Script" uid="uid://c5ecaw5fl1kma" path="res://Scripts/Items/ItemData.gd" id="1_t82np"]
+
+[resource]
+script = ExtResource("1_t82np")
+nombre = "Agua"
+descripcion = "Agua"
+icono = ExtResource("1_5siun")
+metadata/_custom_type_script = "uid://c5ecaw5fl1kma"

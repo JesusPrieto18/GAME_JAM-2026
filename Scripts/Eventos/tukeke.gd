@@ -25,7 +25,7 @@ func _input(event):
 				GameManager.escena_2_salvaste_al_tukeke = true
 				iniciar_dialogo_tuqueque()
 				
-
+	
 				
 		else:
 			# Mensaje opcional si el jugador intenta hablarle antes de tiempo

@@ -39,7 +39,8 @@ func start_scene_dialogues(scene_num: int):
 		await end_dialogue_signal
 	
 	emit_signal("end_scene_signal")
-
+	GameManager.give_object.emit() # LINEA PARA COMPROBAR CONDICIONES DE DAR OBJECTO
+	
 func start_dialogue(name: String, array_dialogues: Array):
 	GameManager.are_dialogues_on = true
 	name_label.text = name

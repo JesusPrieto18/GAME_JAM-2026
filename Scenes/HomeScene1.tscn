@@ -1,46 +1,47 @@
 [gd_scene format=4 uid="uid://cnsyf4q1tw3oa"]
 
-[ext_resource type="Texture2D" uid="uid://dqbun1tcg24p2" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_gqag4"]
+[ext_resource type="Texture2D" uid="uid://lvf17t5gx3jy" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_gqag4"]
 [ext_resource type="Script" uid="uid://2cdvrb5pd43f" path="res://Scripts/Eventos/home_scene_1.gd" id="1_jgbp7"]
 [ext_resource type="Texture2D" uid="uid://djk8jmpoqbs3b" path="res://Assets/Map/Background/black-screen-background-4k.png" id="1_qm63n"]
 [ext_resource type="Texture2D" uid="uid://bomb24kk6xmvy" path="res://Assets/Map/House/Yard/Path_Tile.png" id="2_4d4tq"]
-[ext_resource type="Texture2D" uid="uid://ci787j01tsli6" path="res://Assets/Map/House/Interiors_free_16x16.png" id="2_53t7o"]
+[ext_resource type="Texture2D" uid="uid://2oq2wkfmd6iw" path="res://Assets/Map/House/Interiors_free_16x16.png" id="2_53t7o"]
 [ext_resource type="Texture2D" uid="uid://dokmkd8vjffm5" path="res://Assets/Map/House/Yard/Path_Middle.png" id="3_w3bvg"]
-[ext_resource type="Texture2D" uid="uid://db3r04bd1wl7b" path="res://Assets/Map/House/interior free.png" id="4_7josi"]
+[ext_resource type="Texture2D" uid="uid://c3nvk7ucowxdm" path="res://Assets/Map/House/interior free.png" id="4_7josi"]
 [ext_resource type="Texture2D" uid="uid://c23hkjoty4lx0" path="res://Assets/Map/House/Yard/FarmLand_Tile.png" id="4_rx4vx"]
 [ext_resource type="Texture2D" uid="uid://b80sjx672tw4n" path="res://Assets/Map/House/64x64 Cama2.png" id="5_53t7o"]
-[ext_resource type="Texture2D" uid="uid://b0avm03484kej" path="res://Assets/Map/House/tileset.png" id="5_djr7c"]
+[ext_resource type="Texture2D" uid="uid://bglxeo7ypehch" path="res://Assets/Map/House/tileset.png" id="5_djr7c"]
 [ext_resource type="Texture2D" uid="uid://nj744dr8ns7k" path="res://Assets/Map/House/Yard/Grass_Middle.png" id="5_qm63n"]
 [ext_resource type="Texture2D" uid="uid://dfdtixo361ecg" path="res://Assets/Map/House/Yard/Fences.png" id="6_87aqg"]
 [ext_resource type="Texture2D" uid="uid://bxihk04kdo7dc" path="res://Assets/Map/House/Tileset_16x16_16.png" id="7_rx4vx"]
 [ext_resource type="Texture2D" uid="uid://q2n1g6adgp8u" path="res://Assets/Map/House/Yard/Oak_Tree.png" id="11_v1462"]
 [ext_resource type="Texture2D" uid="uid://fph5fiuxhcfk" path="res://Assets/Map/House/Yard/Outdoor_Decor_Free.png" id="12_iluka"]
-[ext_resource type="Texture2D" uid="uid://ce5iukxrw5fdm" path="res://Assets/Map/House/TopDownHouse_FurnitureState2.png" id="14_qm63n"]
+[ext_resource type="Texture2D" uid="uid://ddyiugr8p8tpy" path="res://Assets/Map/House/TopDownHouse_FurnitureState2.png" id="14_qm63n"]
 [ext_resource type="Texture2D" uid="uid://5jxjncuswfxq" path="res://Assets/UI/Sprites/UI_Flat_Button01a_1.png" id="17_dh137"]
 [ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Personajes/jugador.tscn" id="17_p262x"]
 [ext_resource type="PackedScene" uid="uid://d0gpado8f66yq" path="res://Scenes/Personajes/mom.tscn" id="18_ecifw"]
 [ext_resource type="Script" uid="uid://bc5532shcx4u8" path="res://Scripts/Dialogues/dialogue_box.gd" id="18_jgbp7"]
-[ext_resource type="Script" uid="uid://c8uu38sy7mhlt" path="res://Scripts/Eventos/path_2d_mama_va_al_tanque.gd" id="19_3yxxs"]
+[ext_resource type="Script" path="res://Scripts/Eventos/path_2d_mama_va_al_tanque.gd" id="19_3yxxs"]
 [ext_resource type="Texture2D" uid="uid://ck0vxpnpo15dv" path="res://Assets/UI/Sprites/UI_Flat_Bar10a.png" id="19_453vy"]
 [ext_resource type="AudioStream" uid="uid://cm5uogsmyn5lg" path="res://Assets/Audio/video-game-speak-358238.mp3" id="20_exdaj"]
 [ext_resource type="Texture2D" uid="uid://cxgvwagevv18f" path="res://Assets/UI/Sprites/UI_Flat_Banner04a.png" id="22_omwcw"]
 [ext_resource type="Script" uid="uid://cjg8jhioh7v2s" path="res://Scripts/Dialogues/panel_help.gd" id="23_k445x"]
-[ext_resource type="FontFile" uid="uid://b3diuupqlrvgv" path="res://Assets/Fonts/m5x7.ttf" id="24_4psfi"]
+[ext_resource type="FontFile" uid="uid://dagpd4e5r11m7" path="res://Assets/Fonts/m5x7.ttf" id="24_4psfi"]
 [ext_resource type="AudioStream" uid="uid://yro3rlcdigbu" path="res://Assets/Audio/8-bit-game-2-186976.mp3" id="25_4psfi"]
 [ext_resource type="Texture2D" uid="uid://dapb3p2xk61a3" path="res://Assets/UI/Sprites/UI_Flat_Button02a_3.png" id="26_hpexc"]
 [ext_resource type="Texture2D" uid="uid://cjscjcqsnoorl" path="res://Assets/UI/Sprites/UI_Flat_Button02a_1.png" id="27_i8152"]
 [ext_resource type="Texture2D" uid="uid://cgxf6ar57bkdk" path="res://Assets/UI/Sprites/UI_Flat_IconCross01a.png" id="28_p262x"]
-[ext_resource type="Texture2D" uid="uid://dbwn4jhd2ccri" path="res://Assets/Map/House/TopDownHouse_SmallItems.png" id="29_i8152"]
+[ext_resource type="Texture2D" uid="uid://bjifrpxe6bqsg" path="res://Assets/Map/House/TopDownHouse_SmallItems.png" id="29_i8152"]
 [ext_resource type="Texture2D" uid="uid://e1wxf0d4rass" path="res://Assets/Character/Tuqueque/64x64 Tuqueque.png" id="30_p262x"]
 [ext_resource type="Script" uid="uid://bdq51ep7e18w7" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
 [ext_resource type="Script" uid="uid://bdk7sabykb1kc" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
-[ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/items/Items.gd" id="35_tftfw"]
-[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/items/Agua.tres" id="36_dlu56"]
+[ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/Items/Items.gd" id="35_tftfw"]
+[ext_resource type="Resource" uid="uid://ykluflo0vae3" path="res://Scripts/Items/Agua2.tres" id="36_x3wne"]
 [ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="37_8o5cb"]
 [ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="38_8o5cb"]
-[ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/items/Queso.tres" id="38_x3wne"]
+[ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/Items/Queso.tres" id="38_x3wne"]
 [ext_resource type="Texture2D" uid="uid://bl4wyo6qcdwkb" path="res://Assets/Character/Arepa/32x32 Harina_Pan.png" id="39_wew2n"]
-[ext_resource type="Resource" uid="uid://btwnikrw5is46" path="res://Scripts/items/Harina.tres" id="40_5a820"]
+[ext_resource type="Resource" uid="uid://btwnikrw5is46" path="res://Scripts/Items/Harina.tres" id="40_5a820"]
+[ext_resource type="Resource" uid="uid://b5y1bg81ryhpa" path="res://Scripts/Items/pote.tres" id="42_5a820"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qm63n"]
 texture = ExtResource("1_qm63n")
@@ -8224,7 +8225,7 @@ region = Rect2(65.852844, 446.60007, 6.9299164, 11.549866)
 size = Vector2(32, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wew2n"]
-size = Vector2(20, 39)
+size = Vector2(22, 41)
 
 [node name="HomeLevel" type="Node2D" unique_id=806564061]
 position = Vector2(-36, 15)
@@ -8421,18 +8422,18 @@ texture = SubResource("AtlasTexture_gro66")
 position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_tftfw")
 
-[node name="AreaAgua" type="Area2D" parent="." unique_id=534932564]
+[node name="AreaAgua1" type="Area2D" parent="." unique_id=1915589757]
 position = Vector2(-256, 202)
 collision_layer = 8
 script = ExtResource("35_tftfw")
-item_data = ExtResource("36_dlu56")
+item_data = ExtResource("36_x3wne")
 
-[node name="Sprite2D" type="Sprite2D" parent="AreaAgua" unique_id=649001486]
+[node name="Sprite2D" type="Sprite2D" parent="AreaAgua1" unique_id=1276829114]
 position = Vector2(3.8146973e-06, -4.999996)
 scale = Vector2(0.26562524, 0.26562524)
 texture = ExtResource("37_8o5cb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAgua" unique_id=1172482091]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAgua1" unique_id=399020483]
 position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_wew2n")
 
@@ -8466,15 +8467,42 @@ texture = ExtResource("39_wew2n")
 position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_wew2n")
 
+[node name="Tazon" type="Sprite2D" parent="." unique_id=44769402]
+position = Vector2(-245, 302)
+scale = Vector2(1.0494797, 1.0494796)
+texture = ExtResource("29_i8152")
+region_enabled = true
+region_rect = Rect2(49, 38, 14, 12)
+
+[node name="AreaCocinar" type="Area2D" parent="." unique_id=1353605752]
+position = Vector2(-245, 296)
+collision_layer = 8
+script = ExtResource("35_tftfw")
+item_data = ExtResource("42_5a820")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreaCocinar" unique_id=715709955]
+visible = false
+position = Vector2(-1.4781952e-05, 6.0000052)
+scale = Vector2(1.0494797, 1.0494796)
+texture = ExtResource("29_i8152")
+region_enabled = true
+region_rect = Rect2(49, 38, 14, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCocinar" unique_id=442406588]
+position = Vector2(-1, 10.5)
+shape = SubResource("RectangleShape2D_wew2n")
+
 [connection signal="body_entered" from="EscenaSinInternet" to="." method="_on_escena_sin_internet_body_entered"]
 [connection signal="body_entered" from="EscenaTukekePideAyuda" to="." method="_on_escena_tukeke_pide_ayuda_body_entered"]
 [connection signal="pressed" from="CanvasLayer/ButtonExit" to="." method="_on_button_exit_pressed"]
 [connection signal="body_entered" from="Area2DTukeke" to="Area2DTukeke" method="_on_body_entered"]
 [connection signal="body_entered" from="AreaLLaveDePaso" to="AreaLLaveDePaso" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaLLaveDePaso" to="AreaLLaveDePaso" method="_on_body_exited"]
-[connection signal="body_entered" from="AreaAgua" to="AreaAgua" method="_on_body_entered"]
-[connection signal="body_exited" from="AreaAgua" to="AreaAgua" method="_on_body_exited"]
+[connection signal="body_entered" from="AreaAgua1" to="AreaAgua1" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaAgua1" to="AreaAgua1" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaQueso" to="AreaQueso" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaQueso" to="AreaQueso" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaHarina" to="AreaHarina" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaHarina" to="AreaHarina" method="_on_body_exited"]
+[connection signal="body_entered" from="AreaCocinar" to="AreaCocinar" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaCocinar" to="AreaCocinar" method="_on_body_exited"]

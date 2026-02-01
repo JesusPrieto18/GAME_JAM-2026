@@ -21,6 +21,7 @@ func _ready() -> void:
 	
 	select.position = position_container.get(slot_select)
 	select.play("default")
+	GameManager.give_object.connect(give_object)
 	
 func _input(event: InputEvent) -> void:
 # Detectar teclas del 1 al 9 para seleccionar
@@ -46,24 +47,44 @@ func add_object(item: ItemData) -> bool:
 		if GameManager.container[i] == null:
 			GameManager.container[i] = item
 			update_slot(i, item)
+			print("Agregando:"+item.nombre)
 			return true
-			
+	print("No se pudo agregar:"+ item.nombre)
 	return false
 	
-func update_slot(i: int, item: ItemData):
+func update_slot(i: int, item):
 	var slot = grid.get_child(i)
 	print(slot.get_node("MarginContainer/TextureRect").name)
 	var slot_texture = slot.get_child(0).get_node("TextureRect")
 	#print(slot_texture.texture.resource_path)
-	slot.name = item.nombre
-	slot_texture.texture = item.icono
-	slot_texture.visible = true
-	pass
-	
+	if item:
+		slot.name = item.nombre
+		slot_texture.texture = item.icono
+		slot_texture.visible = true
+	else: 
+		slot_texture.texture = null
+		slot_texture.visible = false
+		
 func used_slot():
 	var slot = grid.get_child(slot_select)
 	GameManager.used_item.emit(slot.name)
 
+func give_object():
+	if GameManager.tuqueque_free and not GameManager.tuqueque_te_dio_mascara:
+		GameManager.tuqueque_te_dio_mascara = true
+		add_object(load("res://Scripts/Items/TUKEKE.tres"))
+	
+
+	if GameManager.queso and GameManager.agua and GameManager.harina and not GameManager.arepa:
+		GameManager.arepa = true
+		for i in range(GameManager.container.size()):
+			if not GameManager.container[i] == null:
+				if GameManager.container[i].nombre == "Agua" or GameManager.container[i].nombre  == "Harina" or GameManager.container[i].nombre  == "Queso":
+					update_slot(i, null)
+					GameManager.container[i] = null
+		print("haciendo arepa")
+		add_object(load("res://Scripts/Items/Arepa.tres"))
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
