@@ -40,7 +40,7 @@ var puzzle1 = {
 				"Init": false,
 				"resolved": false,
 				"llaveCerrada": false,
-				"mamaEnElbaño": false,
+				"mamaEnElBaño": false,
 				"help_dialog": "Distrae a tu mamá para salvar al tuqueque en el sarten"
 }
 
