@@ -27,6 +27,10 @@ var hability_on = false
 var last_hability = null
 
 ### LOGICA DE LA HISTORIA ####
+
+var escena_0_sin_internet_lista = false
+var escena_1_tukeke_pide_ayuda_lista = false
+var pc_sin_internet = true
 var tuqueque_free = false
 
 ### LOGICA DE PUZZLES ########
@@ -120,7 +124,7 @@ var dialogues = {
 				"name": name_player,
 				"text": [
 					"Las cosas que trae el KLAP cada vez son más raras...",
-					"Creo que si distraigo a mamá puedo salavar a ese amiguin" 
+					"Creo que si distraigo a mamá puedo salvar a ese amiguin" 
 				]	
 			}
 		
