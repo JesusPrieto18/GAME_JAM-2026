@@ -37,6 +37,7 @@
 [ext_resource type="Script" uid="uid://bdq51ep7e18w7" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
 [ext_resource type="Script" uid="uid://bdk7sabykb1kc" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
 [ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/Items/Items.gd" id="35_tftfw"]
+[ext_resource type="Resource" uid="uid://ykluflo0vae3" path="res://Scripts/Items/Agua2.tres" id="36_x3wne"]
 [ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="37_8o5cb"]
 [ext_resource type="Texture2D" uid="uid://bghl5u0gv18so" path="res://Assets/Map/House/Pipes/64 x 64 Tuberias_2.png" id="37_fleet"]
 [ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="38_8o5cb"]
@@ -44,12 +45,13 @@
 [ext_resource type="Texture2D" uid="uid://bl4wyo6qcdwkb" path="res://Assets/Character/Arepa/32x32 Harina_Pan.png" id="39_wew2n"]
 [ext_resource type="Texture2D" uid="uid://qehal0xvai0a" path="res://Assets/Character/Rata/32x32 Puertica_Raton.png" id="39_y2hdn"]
 [ext_resource type="Resource" uid="uid://btwnikrw5is46" path="res://Scripts/Items/Harina.tres" id="40_5a820"]
-[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/Items/Arepa.tres" id="40_102u4"]
 [ext_resource type="Resource" uid="uid://dd16eqs07l764" path="res://Scripts/Items/pote.tres" id="42_5a820"]
 [ext_resource type="PackedScene" uid="uid://b2thjyj61h7ct" path="res://Scenes/RatScene.tscn" id="43_a3f7c"]
 [ext_resource type="Script" uid="uid://cla4hhwn6nkdb" path="res://Scripts/Puzzles/up_stairs.gd" id="44_4ss8u"]
 [ext_resource type="Script" path="res://Scripts/Eventos/area_no_puedes_salir.gd" id="46_55sd0"]
 [ext_resource type="Script" path="res://Scenes/area_arbol_mango.gd" id="47_2cvk2"]
+[ext_resource type="Resource" uid="uid://c8bdbc2di88jr" path="res://Scripts/Items/MANGO.tres" id="47_102u4"]
+[ext_resource type="Texture2D" uid="uid://bhqt75wnllnwk" path="res://Assets/Character/Mask/32x32 mango_mask.png" id="48_55sd0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qm63n"]
 texture = ExtResource("1_qm63n")
@@ -8255,7 +8257,7 @@ size = Vector2(15, 28)
 radius = 41.01219
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wew2n"]
-size = Vector2(20, 39)
+size = Vector2(22, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3f7c"]
 size = Vector2(67.5, 24)
@@ -8486,7 +8488,7 @@ shape = SubResource("CircleShape2D_fel6r")
 position = Vector2(-256, 202)
 collision_layer = 8
 script = ExtResource("35_tftfw")
-item_data = ExtResource("40_102u4")
+item_data = ExtResource("36_x3wne")
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaAgua" unique_id=649001486]
 position = Vector2(3.8146973e-06, -4.999996)
@@ -8527,6 +8529,22 @@ texture = ExtResource("39_wew2n")
 position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_wew2n")
 
+[node name="MascaraMango" type="Area2D" parent="." unique_id=2012483309]
+position = Vector2(-501, 183)
+collision_layer = 8
+script = ExtResource("35_tftfw")
+item_data = ExtResource("47_102u4")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="MascaraMango" unique_id=554949380]
+position = Vector2(-2.3749783, -7.374978)
+scale = Vector2(0.4140616, 0.4140616)
+texture = ExtResource("48_55sd0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MascaraMango" unique_id=951533437]
+position = Vector2(-2, -7)
+shape = SubResource("RectangleShape2D_wew2n")
+
 [node name="AreaNoPuedesSalir" type="Area2D" parent="." unique_id=1345982776]
 script = ExtResource("46_55sd0")
 
@@ -8547,6 +8565,13 @@ position = Vector2(-130, 195)
 texture = SubResource("AtlasTexture_yr7gi")
 metadata/_edit_lock_ = true
 
+[node name="Pote" type="Sprite2D" parent="." unique_id=439761183]
+position = Vector2(-245, 302)
+scale = Vector2(1.0494797, 1.0494796)
+texture = ExtResource("29_i8152")
+region_enabled = true
+region_rect = Rect2(49, 38, 14, 12)
+
 [node name="AreaCocinar" type="Area2D" parent="." unique_id=342534432]
 position = Vector2(-245, 296)
 collision_layer = 8
@@ -8554,7 +8579,8 @@ script = ExtResource("35_tftfw")
 item_data = ExtResource("42_5a820")
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaCocinar" unique_id=746282434]
-position = Vector2(-1.4781952e-05, 6.0000052)
+visible = false
+position = Vector2(0, 6)
 scale = Vector2(1.0494797, 1.0494796)
 texture = ExtResource("29_i8152")
 region_enabled = true
@@ -8590,6 +8616,8 @@ shape = SubResource("CircleShape2D_jme7r")
 [connection signal="body_exited" from="AreaQueso" to="AreaQueso" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaHarina" to="AreaHarina" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaHarina" to="AreaHarina" method="_on_body_exited"]
+[connection signal="body_entered" from="MascaraMango" to="MascaraMango" method="_on_body_entered"]
+[connection signal="body_exited" from="MascaraMango" to="MascaraMango" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaNoPuedesSalir" to="AreaNoPuedesSalir" method="_on_body_entered"]
 [connection signal="body_entered" from="AreaArbolMango" to="AreaArbolMango" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaArbolMango" to="AreaArbolMango" method="_on_body_exited"]
