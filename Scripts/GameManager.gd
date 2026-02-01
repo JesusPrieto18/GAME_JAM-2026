@@ -30,6 +30,7 @@ var last_hability = null
 
 var escena_0_sin_internet_lista = false
 var escena_1_tukeke_pide_ayuda_lista = false
+var escena_2_salvaste_al_tukeke = false
 var pc_sin_internet = true
 var tuqueque_free = false
 

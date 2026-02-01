@@ -21,8 +21,9 @@ func _input(event):
 	
 			if sprite_a_borrar:
 				sprite_a_borrar.queue_free() # Borra el nodo de forma segura al final del frame
-
-			iniciar_dialogo_tuqueque()
+			if !GameManager.escena_2_salvaste_al_tukeke:
+				GameManager.escena_2_salvaste_al_tukeke = true
+				iniciar_dialogo_tuqueque()
 		else:
 			# Mensaje opcional si el jugador intenta hablarle antes de tiempo
 			print("El Tuqueque parece estar durmiendo...")
