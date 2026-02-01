@@ -36,6 +36,7 @@
 [ext_resource type="Script" uid="uid://bdk7sabykb1kc" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
 [ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/items/Items.gd" id="35_tftfw"]
 [ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/items/Agua.tres" id="36_dlu56"]
+[ext_resource type="Texture2D" uid="uid://qehal0xvai0a" path="res://Assets/Character/Rata/32x32 Puertica_Raton.png" id="37_5a820"]
 [ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="37_8o5cb"]
 [ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="38_8o5cb"]
 [ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/items/Queso.tres" id="38_x3wne"]
@@ -8223,6 +8224,9 @@ region = Rect2(65.852844, 446.60007, 6.9299164, 11.549866)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tftfw"]
 size = Vector2(32, 54)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fel6r"]
+radius = 14.035668
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wew2n"]
 size = Vector2(20, 39)
 
@@ -8421,6 +8425,21 @@ texture = SubResource("AtlasTexture_gro66")
 position = Vector2(0, 13)
 shape = SubResource("RectangleShape2D_tftfw")
 
+[node name="AreaAgua2" type="Area2D" parent="." unique_id=1767692298]
+position = Vector2(-307, 199)
+collision_layer = 8
+script = ExtResource("35_tftfw")
+item_data = ExtResource("36_dlu56")
+
+[node name="Sprite2D" type="Sprite2D" parent="AreaAgua2" unique_id=1915628170]
+position = Vector2(2.999997, 2.9999952)
+scale = Vector2(0.5078123, 0.5078123)
+texture = ExtResource("37_5a820")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAgua2" unique_id=1109063735]
+position = Vector2(-1, 6)
+shape = SubResource("CircleShape2D_fel6r")
+
 [node name="AreaAgua" type="Area2D" parent="." unique_id=534932564]
 position = Vector2(-256, 202)
 collision_layer = 8
@@ -8472,6 +8491,8 @@ shape = SubResource("RectangleShape2D_wew2n")
 [connection signal="body_entered" from="Area2DTukeke" to="Area2DTukeke" method="_on_body_entered"]
 [connection signal="body_entered" from="AreaLLaveDePaso" to="AreaLLaveDePaso" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaLLaveDePaso" to="AreaLLaveDePaso" method="_on_body_exited"]
+[connection signal="body_entered" from="AreaAgua2" to="AreaAgua2" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaAgua2" to="AreaAgua2" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaAgua" to="AreaAgua" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaAgua" to="AreaAgua" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaQueso" to="AreaQueso" method="_on_body_entered"]
