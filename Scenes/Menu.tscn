@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bnftrc3dnawg2" path="res://Scripts/Menu/main_menu.gd" id="1_s2c3o"]
 [ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="2_ma218"]
+[ext_resource type="Texture2D" uid="uid://7s5yysig0mq2" path="res://Assets/UI/Logo/Logo(150x150).png" id="3_3jcrr"]
 [ext_resource type="FontFile" uid="uid://bs84xpuyran7j" path="res://Assets/Fonts/BoldPixels.ttf" id="3_idohh"]
 [ext_resource type="FontFile" uid="uid://dagpd4e5r11m7" path="res://Assets/Fonts/m5x7.ttf" id="4_wfhf6"]
 [ext_resource type="Texture2D" uid="uid://dxb4oh73pc3ig" path="res://Assets/UI/Sprites/UI_Flat_Button01a_4.png" id="5_idohh"]
 [ext_resource type="Texture2D" uid="uid://5jxjncuswfxq" path="res://Assets/UI/Sprites/UI_Flat_Button01a_1.png" id="6_wfhf6"]
 [ext_resource type="AudioStream" uid="uid://yro3rlcdigbu" path="res://Assets/Audio/8-bit-game-2-186976.mp3" id="7_wfhf6"]
-[ext_resource type="Texture2D" uid="uid://bfhqrlblk41nx" path="res://Assets/UI/Logo/Logo_Araguaney.png" id="8_3jcrr"]
 
 [sub_resource type="Theme" id="Theme_3jcrr"]
 default_font = ExtResource("4_wfhf6")
@@ -61,6 +61,16 @@ texture = ExtResource("2_ma218")
 expand_mode = 1
 stretch_mode = 6
 
+[node name="TextureRect2" type="TextureRect" parent="MainMenu" unique_id=1955584728]
+texture_filter = 1
+layout_mode = 0
+offset_left = 297.0
+offset_top = 66.0
+offset_right = 447.0
+offset_bottom = 216.0
+texture = ExtResource("3_3jcrr")
+expand_mode = 1
+
 [node name="VainaMask" type="Label" parent="MainMenu" unique_id=1963359681]
 layout_mode = 0
 offset_left = 26.0
@@ -107,15 +117,6 @@ text = "Salir
 
 [node name="BtnSound" type="AudioStreamPlayer2D" parent="MainMenu" unique_id=1549687009]
 stream = ExtResource("7_wfhf6")
-
-[node name="TextureRect2" type="TextureRect" parent="MainMenu" unique_id=543137579]
-layout_mode = 0
-offset_left = 314.0
-offset_top = 69.0
-offset_right = 458.0
-offset_bottom = 209.0
-texture = ExtResource("8_3jcrr")
-expand_mode = 1
 
 [connection signal="pressed" from="MainMenu/VBoxContainer2/BtnPlay" to="MainMenu" method="_on_btn_play_pressed"]
 [connection signal="pressed" from="MainMenu/VBoxContainer2/BtnExit" to="MainMenu" method="_on_btn_exit_pressed"]
