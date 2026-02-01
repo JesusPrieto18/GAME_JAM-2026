@@ -30,8 +30,13 @@ var last_hability = null
 
 var escena_0_sin_internet_lista = false
 var escena_1_tukeke_pide_ayuda_lista = false
+var escena_2_salvaste_al_tukeke = false
 var pc_sin_internet = true
 var tuqueque_free = false
+var tuqueque_te_dio_mascara = false
+
+### CARTEL DE AYUDA ###
+signal actualizar_ayuda(nuevo_texto: String)
 
 ### LOGICA DE PUZZLES ########
 
@@ -142,7 +147,13 @@ var dialogues = {
 													"Me dijiste que me ibas a dar algo si te salvaba"]},
 		{"name": "Tuqueque", "text": [  "Claro claro",
 										"Es que mira, por si no te diste cuenta",
-										"SOY UN TUQUEQUE MÁGICO!!!"]},
+										"SOY UN TUQUEQUE MÁGICO!!!",
+										"Te puedo conceder un deseo"]},
+		{"name": name_player, "text": ["Claro... Entonces puedes hacer que el internet vuelva?"]},
+		{"name": "Tuqueque", "text": [ "De bolas, claro muchacho",
+										"peroooooo.......",
+										"peroooooo.......",]},
+		
 	]
 	
 }
