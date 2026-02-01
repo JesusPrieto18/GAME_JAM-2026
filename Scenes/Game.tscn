@@ -1,12 +1,8 @@
 [gd_scene format=3 uid="uid://bt41xyb7k85vb"]
 
 [ext_resource type="PackedScene" uid="uid://duoiydt1k3nb7" path="res://Scenes/MangoTree/puzzle_2.tscn" id="1_gl6un"]
-[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Personajes/jugador.tscn" id="2_j5yw3"]
 
 [node name="Game" type="Node2D" unique_id=806564061]
 
 [node name="Puzzle2" parent="." unique_id=581298973 instance=ExtResource("1_gl6un")]
 position = Vector2(291, 45)
-
-[node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("2_j5yw3")]
-position = Vector2(294, 145)
