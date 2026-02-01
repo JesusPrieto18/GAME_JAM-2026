@@ -10,6 +10,8 @@
 
 [node name="MangoTree" type="Node2D" unique_id=1852751464]
 
+[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=1231216994]
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1786713292]
 offset_right = 1024.0
 offset_bottom = 1024.0
