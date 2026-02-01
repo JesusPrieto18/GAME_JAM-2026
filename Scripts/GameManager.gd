@@ -43,6 +43,8 @@ var pc_sin_internet = true
 var tuqueque_free = false
 var tuqueque_aun_no_ta_la_mascara = true
 var mascara_mango_obtenida = false
+var rata_te_pide_arepa = false
+var rata_tiene_arepa = false
 
 ### CARTEL DE AYUDA ###
 signal actualizar_ayuda(nuevo_texto: String)
@@ -191,7 +193,23 @@ var dialogues = {
 		{"name": "Rata", "text": ["Epa! Epa! Ciudadano",
 									"A donde va usted?"]},
 		{"name": name_player, "text": ["ehhh... Quiero salir por el otro lado"]},
-		
+		{"name": "Rata", "text": ["Primera vez que lo veo transitar esta área, Ciudadano",
+									"Usted es nuevo?"]},
+		{"name": name_player, "text": ["Bueno, sí...",
+										"Recibí el poder de encogerme que si hace menos de dos minutos"]},
+		{"name": "Rata", "text": ["Ya veooo, con que así está la cosa...",
+									"Mire Ciudadano, como usted es nuevo le voy explicar la situación",
+									"Yo no lo puedo dejar pasar a usted",
+									"Porque es nuevo, nadie lo conoce!!! Quien sabe si usted es de fiar",
+									"¿Y si usted termina filtrando los secretos del mundo de los chiquitos?",
+									"¿Ve? Me pone usted en una situacion muy difícil...",
+									"Pero hoy me desperté de buen animo, Ciudadano",
+									"Para beneficio de usted jeje",
+									"Mire, tengo un poco de hambre, si usted me trae una arepa",
+									"Yo lo dejo pasar",
+									"Pero mientras yo no tenga mi arepa, usted no pasa por aquí",
+									]},
+		{"name": name_player, "text": ["Ahora me vieron cara de chef...."]},
 		
 	]
 	
