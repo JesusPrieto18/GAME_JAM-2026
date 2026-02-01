@@ -22,7 +22,7 @@ func check_vision():
 	see_the_player = false
 	
 	if object_potencial:
-		raycast.target_position = to_local(object_potencial.global_position)
+		raycast.target_position = raycast.to_local(object_potencial.global_position)
 		raycast.force_raycast_update()
 		
 		if raycast.is_colliding():

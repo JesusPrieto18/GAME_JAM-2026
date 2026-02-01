@@ -1,21 +1,21 @@
 [gd_scene format=4 uid="uid://hj3pdevrpffn"]
 
-[ext_resource type="Texture2D" uid="uid://dqbun1tcg24p2" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_gqag4"]
+[ext_resource type="Texture2D" uid="uid://lvf17t5gx3jy" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_gqag4"]
 [ext_resource type="Texture2D" uid="uid://djk8jmpoqbs3b" path="res://Assets/Map/Background/black-screen-background-4k.png" id="1_qm63n"]
 [ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="2_2sy5y"]
 [ext_resource type="Texture2D" uid="uid://bomb24kk6xmvy" path="res://Assets/Map/House/Yard/Path_Tile.png" id="2_4d4tq"]
-[ext_resource type="Texture2D" uid="uid://ci787j01tsli6" path="res://Assets/Map/House/Interiors_free_16x16.png" id="2_53t7o"]
+[ext_resource type="Texture2D" uid="uid://2oq2wkfmd6iw" path="res://Assets/Map/House/Interiors_free_16x16.png" id="2_53t7o"]
 [ext_resource type="Texture2D" uid="uid://dokmkd8vjffm5" path="res://Assets/Map/House/Yard/Path_Middle.png" id="3_w3bvg"]
-[ext_resource type="Texture2D" uid="uid://db3r04bd1wl7b" path="res://Assets/Map/House/interior free.png" id="4_7josi"]
+[ext_resource type="Texture2D" uid="uid://c3nvk7ucowxdm" path="res://Assets/Map/House/interior free.png" id="4_7josi"]
 [ext_resource type="Texture2D" uid="uid://c23hkjoty4lx0" path="res://Assets/Map/House/Yard/FarmLand_Tile.png" id="4_rx4vx"]
 [ext_resource type="Texture2D" uid="uid://b80sjx672tw4n" path="res://Assets/Map/House/64x64 Cama2.png" id="5_53t7o"]
-[ext_resource type="Texture2D" uid="uid://b0avm03484kej" path="res://Assets/Map/House/tileset.png" id="5_djr7c"]
+[ext_resource type="Texture2D" uid="uid://bglxeo7ypehch" path="res://Assets/Map/House/tileset.png" id="5_djr7c"]
 [ext_resource type="Texture2D" uid="uid://nj744dr8ns7k" path="res://Assets/Map/House/Yard/Grass_Middle.png" id="5_qm63n"]
 [ext_resource type="Texture2D" uid="uid://dfdtixo361ecg" path="res://Assets/Map/House/Yard/Fences.png" id="6_87aqg"]
 [ext_resource type="Texture2D" uid="uid://bxihk04kdo7dc" path="res://Assets/Map/House/Tileset_16x16_16.png" id="7_rx4vx"]
 [ext_resource type="Texture2D" uid="uid://q2n1g6adgp8u" path="res://Assets/Map/House/Yard/Oak_Tree.png" id="11_v1462"]
 [ext_resource type="Texture2D" uid="uid://fph5fiuxhcfk" path="res://Assets/Map/House/Yard/Outdoor_Decor_Free.png" id="12_iluka"]
-[ext_resource type="Texture2D" uid="uid://ce5iukxrw5fdm" path="res://Assets/Map/House/TopDownHouse_FurnitureState2.png" id="14_qm63n"]
+[ext_resource type="Texture2D" uid="uid://ddyiugr8p8tpy" path="res://Assets/Map/House/TopDownHouse_FurnitureState2.png" id="14_qm63n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qm63n"]
 texture = ExtResource("1_qm63n")
@@ -4121,7 +4121,7 @@ texture = ExtResource("1_qm63n")
 63:63/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_87aqg"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_qm63n")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qicg7"]
@@ -4748,7 +4748,7 @@ texture = ExtResource("7_rx4vx")
 8:13/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gqag4"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_qicg7")
 sources/1 = SubResource("TileSetAtlasSource_dh137")
 sources/2 = SubResource("TileSetAtlasSource_jgbp7")
@@ -6668,7 +6668,7 @@ texture = ExtResource("14_qm63n")
 12:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_w3bvg"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_4ucap")
 sources/2 = SubResource("TileSetAtlasSource_a6w03")
 sources/3 = SubResource("TileSetAtlasSource_4d4tq")
