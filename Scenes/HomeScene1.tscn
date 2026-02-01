@@ -35,13 +35,15 @@
 [ext_resource type="Script" uid="uid://bdq51ep7e18w7" path="res://Scripts/Eventos/tukeke.gd" id="32_pttn6"]
 [ext_resource type="Script" uid="uid://bdk7sabykb1kc" path="res://Scripts/Eventos/area_l_lave_de_paso.gd" id="33_pttn6"]
 [ext_resource type="Script" uid="uid://dpg4hm6beksn3" path="res://Scripts/items/Items.gd" id="35_tftfw"]
-[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/items/Agua.tres" id="36_dlu56"]
+[ext_resource type="Resource" uid="uid://ddcbxny2fslsb" path="res://Scripts/items/Arepa.tres" id="36_dlu56"]
 [ext_resource type="Texture2D" uid="uid://qehal0xvai0a" path="res://Assets/Character/Rata/32x32 Puertica_Raton.png" id="37_5a820"]
 [ext_resource type="Texture2D" uid="uid://cole2jnkk4l8r" path="res://Assets/Character/Arepa/32x32 Agua.png" id="37_8o5cb"]
 [ext_resource type="Texture2D" uid="uid://b4152qlw8jnxk" path="res://Assets/Character/Arepa/32x32 Queso.png" id="38_8o5cb"]
 [ext_resource type="Resource" uid="uid://bo4f520qq837e" path="res://Scripts/items/Queso.tres" id="38_x3wne"]
 [ext_resource type="Texture2D" uid="uid://bl4wyo6qcdwkb" path="res://Assets/Character/Arepa/32x32 Harina_Pan.png" id="39_wew2n"]
 [ext_resource type="Resource" uid="uid://btwnikrw5is46" path="res://Scripts/items/Harina.tres" id="40_5a820"]
+[ext_resource type="Script" uid="uid://ba8nkie68hg6x" path="res://Scripts/Eventos/area_no_puedes_salir.gd" id="43_fel6r"]
+[ext_resource type="Script" uid="uid://tf4kvb6vk5nk" path="res://Scenes/area_arbol_mango.gd" id="44_a3f7c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qm63n"]
 texture = ExtResource("1_qm63n")
@@ -8225,10 +8227,16 @@ region = Rect2(65.852844, 446.60007, 6.9299164, 11.549866)
 size = Vector2(32, 54)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fel6r"]
-radius = 14.035668
+radius = 41.01219
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wew2n"]
 size = Vector2(20, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3f7c"]
+size = Vector2(67.5, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ss8u"]
+size = Vector2(58, 75.5)
 
 [node name="HomeLevel" type="Node2D" unique_id=806564061]
 position = Vector2(-36, 15)
@@ -8429,7 +8437,6 @@ shape = SubResource("RectangleShape2D_tftfw")
 position = Vector2(-307, 199)
 collision_layer = 8
 script = ExtResource("35_tftfw")
-item_data = ExtResource("36_dlu56")
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaAgua2" unique_id=1915628170]
 position = Vector2(2.999997, 2.9999952)
@@ -8485,6 +8492,20 @@ texture = ExtResource("39_wew2n")
 position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_wew2n")
 
+[node name="AreaNoPuedesSalir" type="Area2D" parent="." unique_id=1345982776]
+script = ExtResource("43_fel6r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaNoPuedesSalir" unique_id=1643684084]
+position = Vector2(79, 135)
+shape = SubResource("RectangleShape2D_a3f7c")
+
+[node name="AreaArbolMango" type="Area2D" parent="." unique_id=137886123]
+script = ExtResource("44_a3f7c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaArbolMango" unique_id=1097058153]
+position = Vector2(-594, 77.25)
+shape = SubResource("RectangleShape2D_4ss8u")
+
 [connection signal="body_entered" from="EscenaSinInternet" to="." method="_on_escena_sin_internet_body_entered"]
 [connection signal="body_entered" from="EscenaTukekePideAyuda" to="." method="_on_escena_tukeke_pide_ayuda_body_entered"]
 [connection signal="pressed" from="CanvasLayer/ButtonExit" to="." method="_on_button_exit_pressed"]
@@ -8499,3 +8520,7 @@ shape = SubResource("RectangleShape2D_wew2n")
 [connection signal="body_exited" from="AreaQueso" to="AreaQueso" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaHarina" to="AreaHarina" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaHarina" to="AreaHarina" method="_on_body_exited"]
+[connection signal="body_entered" from="AreaNoPuedesSalir" to="AreaNoPuedesSalir" method="_on_body_entered"]
+[connection signal="body_entered" from="AreaArbolMango" to="AreaArbolMango" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaArbolMango" to="AreaArbolMango" method="_on_body_exited"]
+[connection signal="body_shape_exited" from="AreaArbolMango" to="AreaArbolMango" method="_on_body_shape_exited"]

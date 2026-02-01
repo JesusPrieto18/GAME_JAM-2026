@@ -34,6 +34,7 @@ var escena_2_salvaste_al_tukeke = false
 var pc_sin_internet = true
 var tuqueque_free = false
 var tuqueque_aun_no_ta_la_mascara = true
+var mascara_mango_obtenida = false
 
 ### CARTEL DE AYUDA ###
 signal actualizar_ayuda(nuevo_texto: String)
@@ -49,18 +50,18 @@ var puzzle1 = {
 				"help_dialog": "Distrae a tu mamá para salvar al tuqueque en el sarten"
 }
 
-# Puzzle2: Arepa
+# Puzzle2: Mango
 var puzzle2 = {
 				"Init": false,
 				"resolved": false,
-				"help_dialog": "Encuentra los ingredientes de la arepa para la rata"
+				"help_dialog": "Mueve las piedras",
 }
 
-# Puzzle3: Mango
+# Puzzle3: Arepa
 var puzzle3 = {
 				"Init": false,
 				"resolved": false,
-				"help_dialog": "Mueve las piedras",
+				"help_dialog": "Encuentra los ingredientes de la arepa para la rata"
 }
 
 # Puzzle4: Forum
@@ -160,6 +161,9 @@ var dialogues = {
 										"Son tres: TuquequeMask, MangoMask y ChiguireMask",
 										"Yo tengo la del TuquequeMask, te la voy a dar",
 										"<---TUQUEQUE TE DIO TUQUEQUE_MASK--->",
+										"<---Para usarla:",
+										"<--Selecciona la máscara (Presiona 1, 2, ...)-->",
+										"<--Luego presiona Q-->",
 										"A ver si te ayuda para buscar las que faltan",
 										"Pero no te la vayas a chorear, mosca",
 										"Con esa máscara puedes volverte de mi tamaño",
@@ -167,8 +171,18 @@ var dialogues = {
 										"En cuanto a las demás máscaras...",
 										"La última vez que vi la MangoMask",
 										"Estaba en un árbol del patio",
+										"Se ma cayó cuando estaba comiendo un manguito con adobo",
+										"Mientras que ChiguireMask se la preste a un pana",
+										"Dijo que la queria usar en la Comvención de Chiguires",
+										"La Comvención es el Dorum, un poco lejos de acá..-",
 										"Y pues nada, echale bola chamo"]},
-		{"name": name_player, "text": ["Si va mano! con tal de que vuelva el internet"]},
+		{"name": name_player, "text": ["Si va mano! Con tal de que vuelva el internet"]},		
+	],
+	
+	3: [
+		{"name": "Rata", "text": ["Epa! Epa! Ciudadano",
+									"A donde va usted?"]},
+		{"name": name_player, "text": ["ehhh... Quiero salir por el otro lado"]},
 		
 		
 	]
