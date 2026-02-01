@@ -12,9 +12,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_4x405"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 239, 103, 0, 0, 0, 0, 216.30771, 52.999996, 0, 0, 0, 0, 235, 21, 0, 0, 0, 0, 296, 22, 0, 0, 0, 0, 316, 71, 0, 0, 0, 0, 264, 98, 0, 0, 0, 0, 239, 103)
+"points": PackedVector2Array(0, 0, 0, 0, 239, 103, 0, 0, 0, 0, 219.86813, 92.99999, 0, 0, 0, 0, 216.30771, 65.99999, 0, 0, 0, 0, 221.64835, 38.999996, 0, 0, 0, 0, 235, 21, 0, 0, 0, 0, 296, 22, 0, 0, 0, 0, 316, 71, 0, 0, 0, 0, 302.64838, 88.99999, 0, 0, 0, 0, 278.6154, 99.99999, 0, 0, 0, 0, 260.8132, 104.99999, 0, 0, 0, 0, 239, 103)
 }
-point_count = 7
+point_count = 11
 
 [node name="MangoTree" type="Node2D" unique_id=1852751464]
 
@@ -69,7 +69,7 @@ curve = SubResource("Curve2D_4x405")
 script = ExtResource("7_uap8i")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1231216994]
-position = Vector2(313.7702, 65.53702)
+position = Vector2(311.20505, 59.252388)
 rotation = -1.9968438
 progress = 200.0
 rotates = false
@@ -81,7 +81,7 @@ update_rotation = false
 update_scale = false
 
 [node name="Mom" parent="." unique_id=1692963863 instance=ExtResource("8_4x405")]
-position = Vector2(313.49487, 65.53702)
+position = Vector2(310.61304, 59.252388)
 
 [node name="Jugador" parent="." unique_id=1838188201 instance=ExtResource("4_wsb7y")]
 position = Vector2(178, -21)
