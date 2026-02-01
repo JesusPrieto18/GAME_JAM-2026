@@ -70,8 +70,9 @@ func used_slot():
 	GameManager.used_item.emit(slot.name)
 
 func give_object():
-	if GameManager.tuqueque_free and not GameManager.tuqueque_te_dio_mascara:
-		GameManager.tuqueque_te_dio_mascara = true
+
+	if GameManager.tuqueque_free and not GameManager.tuqueque_aun_no_ta_la_mascara:
+		GameManager.tuqueque_aun_no_ta_la_mascara = true
 		add_object(load("res://Scripts/Items/TUKEKE.tres"))
 	
 
