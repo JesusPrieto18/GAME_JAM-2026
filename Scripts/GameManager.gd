@@ -37,24 +37,28 @@ var tuqueque_free = false
 
 # Puzzle1: Distraer a mamá
 var puzzle1 = {
+				"Init": false,
 				"resolved": false,
 				"help_dialog": "Distrae a tu mamá para salvar al tuqueque"
 }
 
 # Puzzle2: Arepa
 var puzzle2 = {
+				"Init": false,
 				"resolved": false,
 				"help_dialog": "Encuentra los ingredientes de la arepa para la rata"
 }
 
 # Puzzle3: Mango
 var puzzle3 = {
+				"Init": false,
 				"resolved": false,
 				"help_dialog": "Mueve las piedras",
 }
 
 # Puzzle4: Forum
 var puzzle4 = {
+				"Init": false,
 				"resolved": false,
 				"help_dialog": "Evita los trabajadores y escapa"
 }
