@@ -6,9 +6,9 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+	#pass
 
 
 func _on_btn_play_pressed() -> void:
@@ -19,7 +19,7 @@ func _on_btn_play_pressed() -> void:
 	# Espera un poco para que se vea la animacion y se escuche el sonido
 	await get_tree().create_timer(0.15).timeout
 	# Cambiar de escena para jugar 
-	get_tree().change_scene_to_file("res://Scenes/HomeScene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/HomeScene1.tscn")
 
 func _on_btn_options_pressed() -> void:
 	# Reproduce el sonido
