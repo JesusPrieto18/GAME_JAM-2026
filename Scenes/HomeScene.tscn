@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://c3qocsuv8u6je"]
+[gd_scene format=4 uid="uid://phdi60m44yjs"]
 
 [ext_resource type="Texture2D" uid="uid://djk8jmpoqbs3b" path="res://Assets/Map/Background/black-screen-background-4k.png" id="1_0eycu"]
 [ext_resource type="Texture2D" uid="uid://dqbun1tcg24p2" path="res://Assets/Map/House/Room_Builder_free_16x16.png" id="1_5xu7f"]
@@ -8283,18 +8283,5 @@ tile_map_data = PackedByteArray("AAAOAAMAAAAFAAEAAAANAAIAAAAAAAIAAAAOAAEAAAABAAQ
 tile_set = SubResource("TileSet_qm63n")
 
 [node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("5_63w74")]
-<<<<<<< HEAD
 position = Vector2(-69, -98)
 scale = Vector2(1.357527, 1.366385)
-=======
-position = Vector2(-97, -27)
-
-[connection signal="body_entered" from="Arepa" to="Arepa" method="_on_body_entered"]
-[connection signal="body_exited" from="Arepa" to="Arepa" method="_on_body_exited"]
-[connection signal="body_entered" from="Agua" to="Agua" method="_on_body_entered"]
-[connection signal="body_exited" from="Agua" to="Agua" method="_on_body_exited"]
-[connection signal="body_entered" from="Harina" to="Harina" method="_on_body_entered"]
-[connection signal="body_exited" from="Harina" to="Harina" method="_on_body_exited"]
-[connection signal="body_entered" from="Queso" to="Queso" method="_on_body_entered"]
-[connection signal="body_exited" from="Queso" to="Queso" method="_on_body_exited"]
->>>>>>> f9a417b31b3e678ed9f55b4729535a7b828ac28d
