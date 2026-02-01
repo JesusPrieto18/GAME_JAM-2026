@@ -15,13 +15,14 @@ var writing = false
 @onready var name_label = $ContainerName/Name
 
 signal end_dialogue_signal
+signal end_scene_signal
+
 
 ####################### FUNCIONES INICIALES ######################### 	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.hide()
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,13 +33,12 @@ func _process(delta: float) -> void:
 
 func start_scene_dialogues(scene_num: int):
 	var scene_dialogues = GameManager.dialogues[scene_num]
-	print("AAAAAAA")
-	print(scene_dialogues)
-	print(scene_dialogues[0])
 	
 	for i in scene_dialogues.size(): 
 		start_dialogue(scene_dialogues[i]["name"], scene_dialogues[i]["text"])
 		await end_dialogue_signal
+	
+	emit_signal("end_scene_signal")
 
 func start_dialogue(name: String, array_dialogues: Array):
 	GameManager.are_dialogues_on = true

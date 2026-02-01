@@ -21,6 +21,13 @@
 [ext_resource type="Script" uid="uid://bc5532shcx4u8" path="res://Scripts/Dialogues/dialogue_box.gd" id="18_jgbp7"]
 [ext_resource type="Texture2D" uid="uid://ck0vxpnpo15dv" path="res://Assets/UI/Sprites/UI_Flat_Bar10a.png" id="19_453vy"]
 [ext_resource type="AudioStream" uid="uid://cm5uogsmyn5lg" path="res://Assets/Audio/video-game-speak-358238.mp3" id="20_exdaj"]
+[ext_resource type="Texture2D" uid="uid://cxgvwagevv18f" path="res://Assets/UI/Sprites/UI_Flat_Banner04a.png" id="22_omwcw"]
+[ext_resource type="Script" uid="uid://cjg8jhioh7v2s" path="res://Scripts/Dialogues/panel_help.gd" id="23_k445x"]
+[ext_resource type="FontFile" uid="uid://dagpd4e5r11m7" path="res://Assets/Fonts/m5x7.ttf" id="24_4psfi"]
+[ext_resource type="AudioStream" uid="uid://yro3rlcdigbu" path="res://Assets/Audio/8-bit-game-2-186976.mp3" id="25_4psfi"]
+[ext_resource type="Texture2D" uid="uid://dapb3p2xk61a3" path="res://Assets/UI/Sprites/UI_Flat_Button02a_3.png" id="26_hpexc"]
+[ext_resource type="Texture2D" uid="uid://cjscjcqsnoorl" path="res://Assets/UI/Sprites/UI_Flat_Button02a_1.png" id="27_i8152"]
+[ext_resource type="Texture2D" uid="uid://cgxf6ar57bkdk" path="res://Assets/UI/Sprites/UI_Flat_IconCross01a.png" id="28_p262x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qm63n"]
 texture = ExtResource("1_qm63n")
@@ -8162,8 +8169,26 @@ _data = {
 &"blink": SubResource("Animation_0ayms")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ww7uc"]
+texture = ExtResource("22_omwcw")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dh137"]
 size = Vector2(53.5, 38)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ecifw"]
+texture = ExtResource("26_hpexc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p262x"]
+texture = ExtResource("27_i8152")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lj7v3"]
+texture = ExtResource("27_i8152")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpexc"]
+texture = ExtResource("26_hpexc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i8152"]
+texture = ExtResource("26_hpexc")
 
 [node name="HomeLevel" type="Node2D" unique_id=806564061]
 position = Vector2(-36, 15)
@@ -8255,6 +8280,26 @@ libraries/ = SubResource("AnimationLibrary_4psfi")
 [node name="SpeakSound" type="AudioStreamPlayer2D" parent="CanvasLayerDialogue/DialogueBox" unique_id=1042270470]
 stream = ExtResource("20_exdaj")
 
+[node name="CanvasLayerHelp" type="CanvasLayer" parent="." unique_id=212289095]
+
+[node name="PanelHelp" type="Panel" parent="CanvasLayerHelp" unique_id=1412077744]
+offset_left = 14.0
+offset_top = 8.0
+offset_right = 159.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ww7uc")
+script = ExtResource("23_k445x")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayerHelp/PanelHelp" unique_id=481636519]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 141.0
+offset_bottom = 52.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("24_4psfi")
+theme_override_font_sizes/normal_font_size = 16
+
 [node name="EscenaSinInternet" type="Area2D" parent="." unique_id=275683157]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EscenaSinInternet" unique_id=177148420]
@@ -8267,5 +8312,25 @@ shape = SubResource("RectangleShape2D_dh137")
 position = Vector2(-182, 227)
 shape = SubResource("RectangleShape2D_dh137")
 
+[node name="BtnSound" type="AudioStreamPlayer2D" parent="." unique_id=797406014]
+position = Vector2(484, -4)
+stream = ExtResource("25_4psfi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1724653559]
+
+[node name="ButtonExit" type="Button" parent="CanvasLayer" unique_id=1879562453]
+offset_left = 443.0
+offset_top = 12.0
+offset_right = 468.0
+offset_bottom = 36.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ecifw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p262x")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_lj7v3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hpexc")
+theme_override_styles/focus = SubResource("StyleBoxTexture_i8152")
+icon = ExtResource("28_p262x")
+icon_alignment = 1
+
 [connection signal="body_entered" from="EscenaSinInternet" to="." method="_on_escena_sin_internet_body_entered"]
 [connection signal="body_entered" from="EscenaTukekePideAyuda" to="." method="_on_escena_tukeke_pide_ayuda_body_entered"]
+[connection signal="pressed" from="CanvasLayer/ButtonExit" to="." method="_on_button_exit_pressed"]
