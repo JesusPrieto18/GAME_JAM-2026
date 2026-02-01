@@ -11,6 +11,8 @@ region = Rect2(96, 32, 16, 18)
 size = Vector2(16, 16)
 
 [node name="Piedra" type="RigidBody2D" unique_id=2109547409 groups=["Piedras"]]
+collision_layer = 4
+collision_mask = 55
 mass = 10.0
 gravity_scale = 0.0
 lock_rotation = true

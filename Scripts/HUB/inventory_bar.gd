@@ -1,6 +1,7 @@
 extends Control
 
 @export var container_test: Array[ItemData]
+signal item_select()
 
 var position_container = {
 	0: Vector2(43.5, 19.5),
@@ -9,7 +10,7 @@ var position_container = {
 	3: Vector2(157.5, 19.5),
 	4: Vector2(195.5, 19.5)
 }
-
+# Porque le explota a Sandi
 @onready var select = $MarginContainer/MarginContainer/AnimatedSprite2D
 @onready var grid = $MarginContainer/MarginContainer/HBoxContainer
 var slot_select: int = 0
@@ -21,7 +22,7 @@ func _ready() -> void:
 	
 	select.position = position_container.get(slot_select)
 	select.play("default")
-
+	
 func _input(event: InputEvent) -> void:
 # Detectar teclas del 1 al 9 para seleccionar
 	if event is InputEventKey and event.pressed:
@@ -63,7 +64,7 @@ func update_slot(i: int, item: ItemData):
 func used_slot():
 	var slot = grid.get_child(slot_select)
 	GameManager.used_item.emit(slot.name)
-	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

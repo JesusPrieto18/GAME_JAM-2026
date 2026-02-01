@@ -8283,5 +8283,18 @@ tile_map_data = PackedByteArray("AAAOAAMAAAAFAAEAAAANAAIAAAAAAAIAAAAOAAEAAAABAAQ
 tile_set = SubResource("TileSet_qm63n")
 
 [node name="Jugador" parent="." unique_id=366462625 instance=ExtResource("5_63w74")]
+<<<<<<< HEAD
 position = Vector2(-69, -98)
 scale = Vector2(1.357527, 1.366385)
+=======
+position = Vector2(-97, -27)
+
+[connection signal="body_entered" from="Arepa" to="Arepa" method="_on_body_entered"]
+[connection signal="body_exited" from="Arepa" to="Arepa" method="_on_body_exited"]
+[connection signal="body_entered" from="Agua" to="Agua" method="_on_body_entered"]
+[connection signal="body_exited" from="Agua" to="Agua" method="_on_body_exited"]
+[connection signal="body_entered" from="Harina" to="Harina" method="_on_body_entered"]
+[connection signal="body_exited" from="Harina" to="Harina" method="_on_body_exited"]
+[connection signal="body_entered" from="Queso" to="Queso" method="_on_body_entered"]
+[connection signal="body_exited" from="Queso" to="Queso" method="_on_body_exited"]
+>>>>>>> f9a417b31b3e678ed9f55b4729535a7b828ac28d
