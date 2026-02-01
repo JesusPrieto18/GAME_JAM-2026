@@ -8425,7 +8425,7 @@ shape = SubResource("RectangleShape2D_tftfw")
 position = Vector2(-256, 202)
 collision_layer = 8
 script = ExtResource("35_tftfw")
-item_data = ExtResource("36_x3wne")
+item_data = ExtResource("36_dlu56")
 
 [node name="Sprite2D" type="Sprite2D" parent="AreaAgua" unique_id=649001486]
 position = Vector2(3.8146973e-06, -4.999996)
