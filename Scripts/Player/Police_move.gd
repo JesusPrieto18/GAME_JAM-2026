@@ -34,7 +34,7 @@ func check_vision():
 				see_the_player = false
 
 func move():
-	if see_the_player and object_potencial:
+	if see_the_player and object_potencial and not GameManager.last_hability == "Capy":
 		var direction = (object_potencial.global_position - global_position).normalized()
 		velocity = direction * SPEED
 		
