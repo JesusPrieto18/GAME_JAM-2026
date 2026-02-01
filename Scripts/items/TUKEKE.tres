@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://crb4c3r0isvoy"]
+
+[ext_resource type="Texture2D" uid="uid://c3cn5pbrv2hq2" path="res://Assets/Character/Mask/32x32 tuqueque_mask.png" id="1_ids0g"]
+[ext_resource type="Script" uid="uid://c5ecaw5fl1kma" path="res://Scripts/Items/ItemData.gd" id="2_uno8m"]
+
+[resource]
+script = ExtResource("2_uno8m")
+nombre = "Tuqueque"
+descripcion = "MAscara de Tuqueque"
+icono = ExtResource("1_ids0g")
+metadata/_custom_type_script = "uid://c5ecaw5fl1kma"

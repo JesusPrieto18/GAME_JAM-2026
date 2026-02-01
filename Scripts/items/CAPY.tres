@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b3dq6wgjta2o0"]
+
+[ext_resource type="Texture2D" uid="uid://cs0lhdpii5uvk" path="res://Assets/Character/Mask/32x32 chiguire_mask2.png" id="1_wiycy"]
+[ext_resource type="Script" uid="uid://c5ecaw5fl1kma" path="res://Scripts/Items/ItemData.gd" id="2_sprcv"]
+
+[resource]
+script = ExtResource("2_sprcv")
+nombre = "Capy"
+descripcion = "Mascara de Capibara"
+icono = ExtResource("1_wiycy")
+metadata/_custom_type_script = "uid://c5ecaw5fl1kma"

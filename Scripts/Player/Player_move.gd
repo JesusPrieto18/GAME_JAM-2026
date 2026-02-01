@@ -9,6 +9,7 @@ var is_interacting = false
 @onready var state_machine = animation_tree.get("parameters/playback")
 
 func _ready() -> void:
+	GameManager.used_item.connect(_on_used_item)
 	animation_tree.active = true
 	
 func _physics_process(delta: float) -> void:
@@ -57,6 +58,20 @@ func finish_interaction():
 	state_machine.travel("Idle")
 
 
+func _on_used_item(name:String):
+	if not GameManager.hability_on:
+		if name == "Capy":
+			modulate.a = 0.5
+		elif name == "Tuqueque":
+			scale = Vector2(0.5,0.5)
+		GameManager.hability_on = true
+	else:
+		if name == "Capy":
+			modulate.a = 1
+		elif name == "Tuqueque":
+			scale = Vector2(1.5,1.5)
+			
+		GameManager.hability_on = false
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 	print(anim_name)
 	pass # Replace with function body.

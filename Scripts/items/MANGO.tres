@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c8bdbc2di88jr"]
+
+[ext_resource type="Texture2D" uid="uid://bhqt75wnllnwk" path="res://Assets/Character/Mask/32x32 mango_mask.png" id="1_toit2"]
+[ext_resource type="Script" uid="uid://c5ecaw5fl1kma" path="res://Scripts/Items/ItemData.gd" id="2_vkc07"]
+
+[resource]
+script = ExtResource("2_vkc07")
+nombre = "Mango"
+descripcion = "Mascara de Mango"
+icono = ExtResource("1_toit2")
+metadata/_custom_type_script = "uid://c5ecaw5fl1kma"
