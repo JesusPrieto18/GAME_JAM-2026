@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
 
 	if body is CharacterBody2D:
-		body.global_position = teleport.global_position
+		if name == "TeleportHouse" and GameManager.last_hability == "Tuqueque" and GameManager.hability_on:
+			body.global_position = teleport.global_position
