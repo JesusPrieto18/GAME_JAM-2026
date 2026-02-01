@@ -1,11 +1,15 @@
-[gd_scene format=3 uid="uid://d1dl5krurbud"]
+[gd_scene format=3 uid="uid://btoor35m4ul8t"]
 
-[ext_resource type="Script" uid="uid://ud1dyxhar3ms" path="res://Scripts/Player/Player_move.gd" id="1_sweqy"]
-[ext_resource type="Texture2D" uid="uid://l1o46q5oa31r" path="res://Assets/Character/16x16 Interact-Sheet.png" id="3_1jxqw"]
-[ext_resource type="Texture2D" uid="uid://dni2nscejrswx" path="res://Assets/Character/16x16 Walk-Sheet.png" id="5_b26j0"]
+[ext_resource type="Script" uid="uid://fa750hnm8age" path="res://Scripts/Player/Police_move.gd" id="1_rqeye"]
+[ext_resource type="Texture2D" uid="uid://l1o46q5oa31r" path="res://Assets/Character/16x16 Interact-Sheet.png" id="2_odu31"]
+[ext_resource type="Texture2D" uid="uid://dni2nscejrswx" path="res://Assets/Character/16x16 Walk-Sheet.png" id="3_n5tss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7ghd"]
 size = Vector2(8, 7)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_odu31"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n5tss"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sweqy"]
 load_path = "res://.godot/imported/16x16 Idle-Sheet.png-9ed86ef49a567026d2ae84335c894536.ctex"
@@ -320,7 +324,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_1jxqw")]
+"values": [ExtResource("2_odu31")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -386,7 +390,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_1jxqw")]
+"values": [ExtResource("2_odu31")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -465,7 +469,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_1jxqw")]
+"values": [ExtResource("2_odu31")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -543,7 +547,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_1jxqw")]
+"values": [ExtResource("2_odu31")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -622,7 +626,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_b26j0")]
+"values": [ExtResource("3_n5tss")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -675,7 +679,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_b26j0")]
+"values": [ExtResource("3_n5tss")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -728,7 +732,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_b26j0")]
+"values": [ExtResource("3_n5tss")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -793,7 +797,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_b26j0")]
+"values": [ExtResource("3_n5tss")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -940,23 +944,34 @@ states/Walk/position = Vector2(425, 163)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_q13i1"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_pylmc"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_pbfsw"), "Idle", "Interact", SubResource("AnimationNodeStateMachineTransition_vgqql"), "Walk", "Interact", SubResource("AnimationNodeStateMachineTransition_6t5aa")]
 graph_offset = Vector2(34, -20.079506)
 
-[node name="Player" type="CharacterBody2D" unique_id=1692963863 groups=["Jugador"]]
+[node name="Police" type="CharacterBody2D" unique_id=1692963863]
 position = Vector2(-0.9999995, -5.9604645e-08)
-collision_mask = 126
+collision_layer = 16
+collision_mask = 55
 motion_mode = 1
-script = ExtResource("1_sweqy")
-SPEED = 150.0
-metadata/_edit_group_ = true
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=674262309]
-position = Vector2(0, 5.9604645e-08)
-zoom = Vector2(2, 2)
+script = ExtResource("1_rqeye")
+SPEED = 120.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1193407763]
 position = Vector2(-3.5762787e-07, 6.5)
 shape = SubResource("RectangleShape2D_n7ghd")
 
+[node name="AreaDetection" type="Area2D" parent="." unique_id=1058422193]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDetection" unique_id=425841703]
+position = Vector2(-4.7683716e-07, 2)
+scale = Vector2(7.4799986, 7.4799986)
+shape = SubResource("CircleShape2D_odu31")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=378936390]
+scale = Vector2(1.1599976, 1.1599976)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox" unique_id=1475253589]
+position = Vector2(-4.1106736e-07, 1.7241415)
+shape = SubResource("CircleShape2D_n5tss")
+
 [node name="Sprite" type="Sprite2D" parent="." unique_id=118910512]
+modulate = Color(0.8792635, 0.38109186, 0, 1)
 texture_filter = 1
 texture = SubResource("CompressedTexture2D_sweqy")
 hframes = 4
@@ -973,4 +988,10 @@ parameters/Idle/blend_position = Vector2(0.0008109808, -0.002257347)
 parameters/Interact/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
 
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=297163495]
+collision_mask = 7
+
+[connection signal="body_entered" from="AreaDetection" to="." method="_on_area_detection_body_entered"]
+[connection signal="body_exited" from="AreaDetection" to="." method="_on_area_detection_body_exited"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]

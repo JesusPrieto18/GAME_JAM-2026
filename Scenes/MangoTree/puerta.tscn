@@ -11,6 +11,8 @@ region = Rect2(88, 69, 16, 27)
 size = Vector2(16, 27)
 
 [node name="Puerta" type="StaticBody2D" unique_id=1497246633]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_2vmd3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=391674412]

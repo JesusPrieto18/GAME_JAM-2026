@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b8jgntdsvxrib"]
+
+[ext_resource type="Script" uid="uid://12abpc21llle" path="res://Scripts/Player/jugador.gd" id="1_82m1l"]
+[ext_resource type="PackedScene" uid="uid://btoor35m4ul8t" path="res://Scenes/Jugador/police.tscn" id="2_wklf7"]
+
+[node name="Policia" type="Node2D" unique_id=366462625]
+script = ExtResource("1_82m1l")
+
+[node name="Police" parent="." unique_id=1692963863 instance=ExtResource("2_wklf7")]

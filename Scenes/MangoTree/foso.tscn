@@ -10,7 +10,9 @@ region = Rect2(624, 309, 33, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15764"]
 size = Vector2(16, 18)
 
-[node name="Fondo" type="Area2D" unique_id=1865440631]
+[node name="Foso" type="Area2D" unique_id=1865440631]
+collision_layer = 64
+collision_mask = 5
 monitorable = false
 script = ExtResource("1_6prq4")
 

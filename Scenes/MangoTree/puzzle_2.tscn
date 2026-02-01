@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://cla4hhwn6nkdb" path="res://Scripts/Puzzles/up_stairs.gd" id="4_bntxx"]
 [ext_resource type="PackedScene" uid="uid://bnyfdc1g4lmge" path="res://Scenes/MangoTree/boton.tscn" id="5_mxogq"]
 [ext_resource type="PackedScene" uid="uid://bchd78sfx4h2q" path="res://Scenes/MangoTree/piedra.tscn" id="7_8n7jp"]
-[ext_resource type="PackedScene" uid="uid://chhirpmfb1esg" path="res://Scenes/MangoTree/fondo.tscn" id="8_nkl40"]
+[ext_resource type="PackedScene" uid="uid://chhirpmfb1esg" path="res://Scenes/MangoTree/foso.tscn" id="8_nkl40"]
 [ext_resource type="Script" uid="uid://pitvs2ll3djv" path="res://Scripts/Puzzles/spawn_piedras.gd" id="9_adk2l"]
 [ext_resource type="Texture2D" uid="uid://6symnsm50hx1" path="res://Assets/UI/Sprites/UI_Flat_ButtonPlus01a.png" id="10_nkl40"]
 
@@ -1254,7 +1254,8 @@ texture = ExtResource("3_bntxx")
 14:33/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_t6cw6"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 21
 sources/0 = SubResource("TileSetAtlasSource_opj53")
 sources/1 = SubResource("TileSetAtlasSource_fha7t")
 sources/2 = SubResource("TileSetAtlasSource_adk2l")

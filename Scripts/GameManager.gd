@@ -17,10 +17,14 @@ var name_player = "El niñe"
 ### INVENTARIO ###
 
 var container = [null, null, null, null, null]
-signal used_item(name_item)
+
+signal used_item(name)
+signal highlight_item_on()
+signal highlight_item_off()
 
 ### SWICTH DE HABILIDAD ###
 var hability_on = false
+var last_hability = null
 
 ### LOGICA DE LA HISTORIA ####
 var tuqueque_free = false

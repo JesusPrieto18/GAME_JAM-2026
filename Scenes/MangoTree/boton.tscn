@@ -13,6 +13,8 @@ region = Rect2(1, 101, 30, 26)
 size = Vector2(30, 26)
 
 [node name="Boton" type="Area2D" unique_id=752356381]
+collision_layer = 32
+collision_mask = 5
 monitorable = false
 script = ExtResource("1_mt4we")
 
