@@ -3,11 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://dd2i4ii11tlra" path="res://Assets/Map/Dungeon1/wall-tiles-32x32.png" id="1_2q31l"]
 [ext_resource type="PackedScene" uid="uid://duoiydt1k3nb7" path="res://Scenes/MangoTree/puzzle_2.tscn" id="1_7tr76"]
 [ext_resource type="Texture2D" uid="uid://djk8jmpoqbs3b" path="res://Assets/Map/Background/black-screen-background-4k.png" id="1_hhjjp"]
-[ext_resource type="Texture2D" uid="uid://bmb5rm43tfqmn" path="res://Assets/Map/Dungeon1/walls.png" id="2_7dmh8"]
+[ext_resource type="Texture2D" uid="uid://b3xdyask6dt6i" path="res://Assets/Map/Dungeon1/walls.png" id="2_7dmh8"]
 [ext_resource type="Texture2D" uid="uid://cprbh0vwq07yj" path="res://Assets/Map/Dungeon1/wall-transition-tiles-32x32.png" id="3_hhjjp"]
 [ext_resource type="Texture2D" uid="uid://15n1p25143an" path="res://Assets/Map/Dungeon1/tiles-all-32x32.png" id="4_ov1xy"]
-[ext_resource type="Texture2D" uid="uid://b0inhrjypcml6" path="res://Assets/Map/Dungeon1/decorative.png" id="6_ov1xy"]
-[ext_resource type="Texture2D" uid="uid://cq0spvgqb6kb2" path="res://Assets/Map/Dungeon1/mainlevbuild.png" id="7_02vhu"]
+[ext_resource type="Texture2D" uid="uid://bejovqn38aysm" path="res://Assets/Map/Dungeon1/decorative.png" id="6_ov1xy"]
+[ext_resource type="Texture2D" uid="uid://bd3uexiguufxn" path="res://Assets/Map/Dungeon1/mainlevbuild.png" id="7_02vhu"]
+[ext_resource type="Script" uid="uid://dyyvkxtx2j77" path="res://Scripts/Eventos/area_2d_rat_1.gd" id="9_7tr76"]
 [ext_resource type="Texture2D" uid="uid://bt2xkba2xikpm" path="res://Assets/Character/Rata/32x32 Rata_policia.png" id="9_v4jpo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ov1xy"]
@@ -9118,7 +9119,8 @@ tile_map_data = PackedByteArray("AAALAP//AQACAAAAAAALAAAAAQAGAAMAAAAMAP//AQADAAA
 tile_set = SubResource("TileSet_sutcp")
 
 [node name="Area2DRat" type="Area2D" parent="." unique_id=231205877]
-collision_mask = 2
+collision_layer = 2
+script = ExtResource("9_7tr76")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2DRat" unique_id=1161519494]
 position = Vector2(129, 52.000004)
@@ -9132,3 +9134,6 @@ shape = SubResource("RectangleShape2D_v4jpo")
 [node name="Roof" type="TileMapLayer" parent="." unique_id=1092634666]
 tile_map_data = PackedByteArray("AAAJAAEAAAAFAAsAAAAKAAEAAAAGAAsAAAAJAAAAAAADAAUAAAAKAAAAAAADAAUAAAAJAP3/AAAAAAYAAAAJAP7/AAAAAAcAAAAJAP//AAAAAAgAAAAKAP3/AAAFAAcAAAAKAP7/AAAFAAgAAAAKAP//AAADAAgAAAAJAPv/AAAAAAYAAAAJAPz/AAAAAAUAAAAKAPz/AAAFAAYAAAAJAPr/AAAEAAoAAAAKAPr/AAAFAAoAAAALAPr/AAAGAAoAAAAMAPr/AAAHAAoAAAANAPr/AAAFAAoAAAAOAPr/AAABAA8AAAAPAPr/AAABAA0AAAAMAPv/AAABAAkAAAANAPv/AAACAAkAAAAOAPv/AAADAAkAAAAPAPv/AAACAA0AAAAKAPv/AAABAAgAAAALAPv/AAACAAkAAAAQAPr/AAABAA8AAAAQAPv/AAADAAkAAAARAPr/AAABAA0AAAARAPv/AAACAA0AAAAPAPn/AAAEAAwAAAASAPn/AAAHAAwAAAASAPr/AAABAA0AAAASAPv/AAADAA4AAAAOAPn/AAAAAAUAAAATAPn/AAAFAAUAAAATAPr/AAACAA4AAAATAPv/AAACAA0AAAAPAPj/AAAEAA0AAAASAPj/AAAEAA0AABAOAPj/AAAAAAQAAAATAPj/AAAFAAQAAAA=")
 tile_set = SubResource("TileSet_7uo21")
+
+[connection signal="body_entered" from="Area2DRat" to="Area2DRat" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2DRat" to="Area2DRat" method="_on_body_exited"]
