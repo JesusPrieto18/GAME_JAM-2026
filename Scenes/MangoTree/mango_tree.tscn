@@ -1,16 +1,22 @@
 [gd_scene format=3 uid="uid://xitqjr0dhqmr"]
 
 [ext_resource type="Texture2D" uid="uid://36m622d0up2u" path="res://Assets/Menu/caracas.jpeg" id="1_3mhdu"]
-[ext_resource type="PackedScene" uid="uid://b8jgntdsvxrib" path="res://Scenes/Jugador/policia.tscn" id="1_8rs36"]
+[ext_resource type="PackedScene" uid="uid://b8jgntdsvxrib" path="res://Scenes/Personajes/policia.tscn" id="1_8rs36"]
 [ext_resource type="PackedScene" uid="uid://bnyfdc1g4lmge" path="res://Scenes/MangoTree/boton.tscn" id="2_fyxaw"]
 [ext_resource type="PackedScene" uid="uid://chhirpmfb1esg" path="res://Scenes/MangoTree/foso.tscn" id="2_xhfbp"]
 [ext_resource type="PackedScene" uid="uid://bchd78sfx4h2q" path="res://Scenes/MangoTree/piedra.tscn" id="3_orh5m"]
-[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Jugador/jugador.tscn" id="4_wsb7y"]
+[ext_resource type="PackedScene" uid="uid://1aranp0uojqg" path="res://Scenes/Personajes/jugador.tscn" id="4_wsb7y"]
 [ext_resource type="PackedScene" uid="uid://cktbcnmvhf6aq" path="res://Scenes/MangoTree/puerta.tscn" id="5_f633e"]
+[ext_resource type="Script" uid="uid://cvfswtvm2y37x" path="res://Scenes/MangoTree/path_2d.gd" id="7_uap8i"]
+[ext_resource type="PackedScene" uid="uid://d0gpado8f66yq" path="res://Scenes/Personajes/mom.tscn" id="8_4x405"]
+
+[sub_resource type="Curve2D" id="Curve2D_4x405"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 239, 103, 0, 0, 0, 0, 216.30771, 52.999996, 0, 0, 0, 0, 235, 21, 0, 0, 0, 0, 296, 22, 0, 0, 0, 0, 316, 71, 0, 0, 0, 0, 264, 98, 0, 0, 0, 0, 239, 103)
+}
+point_count = 7
 
 [node name="MangoTree" type="Node2D" unique_id=1852751464]
-
-[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=1231216994]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1786713292]
 offset_right = 1024.0
@@ -46,9 +52,6 @@ position = Vector2(271, 134)
 [node name="Piedra3" parent="." unique_id=1448236779 instance=ExtResource("3_orh5m")]
 position = Vector2(207, 159)
 
-[node name="Jugador" parent="." unique_id=1838188201 instance=ExtResource("4_wsb7y")]
-position = Vector2(0, 10)
-
 [node name="Puerta" parent="." unique_id=1497246633 node_paths=PackedStringArray("list_of_button") instance=ExtResource("5_f633e")]
 position = Vector2(255, 47)
 list_of_button = [NodePath("../Boton"), NodePath("../Boton2")]
@@ -58,3 +61,27 @@ position = Vector2(251, 175)
 
 [node name="Policia" parent="." unique_id=366462625 instance=ExtResource("1_8rs36")]
 position = Vector2(161, 158)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=2038644976]
+position = Vector2(-39.01232, 0)
+scale = Vector2(1.1234566, 1)
+curve = SubResource("Curve2D_4x405")
+script = ExtResource("7_uap8i")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1231216994]
+position = Vector2(313.7702, 65.53702)
+rotation = -1.9968438
+progress = 200.0
+rotates = false
+cubic_interp = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D" unique_id=301772134]
+remote_path = NodePath("../../../Mom")
+update_rotation = false
+update_scale = false
+
+[node name="Mom" parent="." unique_id=1692963863 instance=ExtResource("8_4x405")]
+position = Vector2(313.49487, 65.53702)
+
+[node name="Jugador" parent="." unique_id=1838188201 instance=ExtResource("4_wsb7y")]
+position = Vector2(178, -21)

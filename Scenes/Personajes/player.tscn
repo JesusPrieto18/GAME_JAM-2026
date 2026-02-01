@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://d1dl5krurbud"]
 
 [ext_resource type="Script" uid="uid://ud1dyxhar3ms" path="res://Scripts/Player/Player_move.gd" id="1_sweqy"]
-[ext_resource type="Texture2D" uid="uid://l1o46q5oa31r" path="res://Assets/Character/16x16 Interact-Sheet.png" id="3_1jxqw"]
-[ext_resource type="Texture2D" uid="uid://dni2nscejrswx" path="res://Assets/Character/16x16 Walk-Sheet.png" id="5_b26j0"]
+[ext_resource type="Texture2D" uid="uid://chgvuhqnr25jo" path="res://Assets/Character/Simon/16x16 Simon-Idle-Sheet.png.png" id="2_yj05o"]
+[ext_resource type="Texture2D" uid="uid://cdjmat28eo244" path="res://Assets/Character/Simon/16x16 Simon-Interact-Sheet.png.png" id="3_6pwta"]
+[ext_resource type="Texture2D" uid="uid://bxrnggpqt1csf" path="res://Assets/Character/Simon/16x16 Simon-Walk-Sheet.png.png" id="4_yj05o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7ghd"]
 size = Vector2(8, 7)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sweqy"]
-load_path = "res://.godot/imported/16x16 Idle-Sheet.png-9ed86ef49a567026d2ae84335c894536.ctex"
 
 [sub_resource type="Animation" id="Animation_2hs0m"]
 length = 0.001
@@ -71,7 +69,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [SubResource("CompressedTexture2D_sweqy")]
+"values": [ExtResource("2_yj05o")]
 }
 
 [sub_resource type="Animation" id="Animation_dw050"]
@@ -121,10 +119,10 @@ tracks/3/path = NodePath("Sprite:texture")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [SubResource("CompressedTexture2D_sweqy")]
+"values": [ExtResource("2_yj05o")]
 }
 
 [sub_resource type="Animation" id="Animation_ivps1"]
@@ -164,7 +162,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [SubResource("CompressedTexture2D_sweqy")]
+"values": [ExtResource("2_yj05o")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -228,7 +226,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [SubResource("CompressedTexture2D_sweqy")]
+"values": [ExtResource("2_yj05o")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -280,7 +278,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [SubResource("CompressedTexture2D_sweqy")]
+"values": [ExtResource("2_yj05o")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -320,7 +318,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_1jxqw")]
+"values": [ExtResource("3_6pwta")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -386,7 +384,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_1jxqw")]
+"values": [ExtResource("3_6pwta")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -465,7 +463,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_1jxqw")]
+"values": [ExtResource("3_6pwta")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -543,7 +541,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_1jxqw")]
+"values": [ExtResource("3_6pwta")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -622,7 +620,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_b26j0")]
+"values": [ExtResource("4_yj05o")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -675,7 +673,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_b26j0")]
+"values": [ExtResource("4_yj05o")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -728,7 +726,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_b26j0")]
+"values": [ExtResource("4_yj05o")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -793,7 +791,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_b26j0")]
+"values": [ExtResource("4_yj05o")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -957,7 +955,7 @@ shape = SubResource("RectangleShape2D_n7ghd")
 [node name="Sprite" type="Sprite2D" parent="." unique_id=118910512]
 texture_filter = 1
 position = Vector2(0, -6)
-texture = SubResource("CompressedTexture2D_sweqy")
+texture = ExtResource("2_yj05o")
 hframes = 4
 vframes = 5
 
